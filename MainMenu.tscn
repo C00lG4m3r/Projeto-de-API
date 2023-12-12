@@ -1,17 +1,47 @@
-[gd_scene load_steps=3 format=3 uid="uid://h06apv4m3wca"]
+[gd_scene load_steps=2 format=3 uid="uid://h06apv4m3wca"]
 
 [ext_resource type="Script" path="res://MainMenu.cs" id="1_ybeu7"]
-[ext_resource type="Script" path="res://Button.cs" id="2_8s6rm"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(0, 1)
 script = ExtResource("1_ybeu7")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 277.0
-offset_top = 176.0
-offset_right = 821.0
-offset_bottom = 431.0
-text = "coco"
-script = ExtResource("2_8s6rm")
+offset_left = 550.0
+offset_top = 750.0
+offset_right = 1344.0
+offset_bottom = 886.0
+text = "Quit"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 628.0
+offset_top = 203.0
+offset_right = 1272.0
+offset_bottom = 386.0
+text = "Play"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 666.0
+offset_top = 500.0
+offset_right = 1224.0
+offset_bottom = 618.0
+text = "Instruções"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 614.0
+offset_top = 446.0
+offset_right = 1318.0
+offset_bottom = 583.0
+text = "USA AS SETAS OU O WASD PARA MEXER, TENTA CHEGAR AO FINAL SEM MORRERES AHAHAH"
+
+[node name="Button4" type="Button" parent="."]
+visible = false
+offset_right = 86.0
+offset_bottom = 42.0
+text = "voltar"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

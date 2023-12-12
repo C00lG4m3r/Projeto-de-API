@@ -9,13 +9,13 @@ public partial class main_character : CharacterBody2D
 
 	private AnimatedSprite2D Sprite2D;
 
-    public override void _Ready()
-    {
-        Sprite2D = GetNode<AnimatedSprite2D>("Sprite2D");
+	public override void _Ready()
+	{
+		Sprite2D = GetNode<AnimatedSprite2D>("Sprite2D");
 		GD.Print(Sprite2D);
-    }
+	}
 
-    public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -47,9 +47,13 @@ public partial class main_character : CharacterBody2D
 
 		// Directions and speed.
 		Vector2 direction = Input.GetVector("Left", "Right", "ui_up", "ui_down");
-		if (direction != Vector2.Zero)
+		direction = direction.Normalized();
+		if (direction.X > 0)
 		{
-			velocity.X = direction.X * Speed;
+			velocity.X = Speed;
+		}
+		else if (direction.X < 0) {
+			velocity.X = -Speed;
 		}
 		else
 		{
@@ -60,7 +64,10 @@ public partial class main_character : CharacterBody2D
 		MoveAndSlide();
 
 		//Flip the sprite based on the direction.
-		bool isLeft = velocity.X < 0;
-		Sprite2D.FlipH = isLeft;
+		if (direction.X != 0) 
+		{
+			bool isLeft = velocity.X < 0;
+			Sprite2D.FlipH = isLeft;
+		}
 	}
 }
