@@ -11,14 +11,16 @@ config_version=5
 [application]
 
 config/name="Jogo do Sapo"
-run/main_scene="res://main.tscn"
+run/main_scene="res://MainMenu.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=500
-window/size/mode=2
+window/size/viewport_width=1980
+window/size/viewport_height=1080
+window/size/mode=3
+window/vsync/vsync_mode=0
 
 [dotnet]
 
