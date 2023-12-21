@@ -7,6 +7,8 @@ public partial class main_character : CharacterBody2D
 	public const float Speed = 400.0f;
 	public const float JumpVelocity = -900.0f;
 
+	public string = "";
+
 	private AnimatedSprite2D Sprite2D;
 
 	public override void _Ready()
