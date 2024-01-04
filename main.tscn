@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://hl0b3etahhkf"]
+[gd_scene load_steps=8 format=3 uid="uid://bwa285bab2hpt"]
 
 [ext_resource type="Texture2D" uid="uid://co5mrxcgos1ns" path="res://Yellow.png" id="1_cqn8k"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Terrain (16x16).png" id="2_mt4i3"]
 [ext_resource type="PackedScene" uid="uid://cq5hmy10ocr03" path="res://scenes/main_character.tscn" id="3_e1wr0"]
+[ext_resource type="Script" path="res://Power Ups/power_up.cs" id="4_xnh0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbjo8"]
 texture = ExtResource("2_mt4i3")
@@ -475,6 +476,9 @@ texture = ExtResource("2_mt4i3")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tbjo8")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rduhl"]
+size = Vector2(20, 54)
+
 [node name="Node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -506,3 +510,13 @@ limit_top = 0
 limit_right = 3443
 limit_bottom = 970
 limit_smoothed = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(212, 842)
+script = ExtResource("4_xnh0h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_rduhl")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="OnBodyEntered"]

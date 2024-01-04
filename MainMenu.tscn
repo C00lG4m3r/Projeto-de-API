@@ -14,10 +14,10 @@ offset_bottom = 886.0
 text = "Quit"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 628.0
-offset_top = 203.0
-offset_right = 1272.0
-offset_bottom = 386.0
+offset_left = 642.0
+offset_top = 287.0
+offset_right = 1286.0
+offset_bottom = 470.0
 text = "Play"
 
 [node name="Button3" type="Button" parent="."]
