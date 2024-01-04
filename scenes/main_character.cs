@@ -22,6 +22,12 @@ public partial class main_character : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		//Teleport the player to the start position.
+		if (this.Position.Y >= 1112)
+		{
+			this.Position = new Vector2(204, 823);
+		}
+
 		Vector2 velocity = Velocity;
 		
 
@@ -57,7 +63,8 @@ public partial class main_character : CharacterBody2D
 		{
 			velocity.X = Speed;
 		}
-		else if (direction.X < 0) {
+		else if (direction.X < 0)
+		{
 			velocity.X = -Speed;
 		}
 		else
@@ -75,4 +82,5 @@ public partial class main_character : CharacterBody2D
 			Sprite2D.FlipH = isLeft;
 		}
 	}
+
 }
