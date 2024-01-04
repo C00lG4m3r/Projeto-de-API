@@ -24,7 +24,7 @@ window/vsync/vsync_mode=0
 
 [dotnet]
 
-project/assembly_name="Teste 2"
+project/assembly_name="Projeto de API"
 
 [input]
 

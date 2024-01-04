@@ -29,4 +29,4 @@ sprite_frames = SubResource("SpriteFrames_ttgp0")
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_f6oe2")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

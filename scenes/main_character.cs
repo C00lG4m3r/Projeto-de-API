@@ -10,6 +10,8 @@ public partial class main_character : CharacterBody2D
 	//public string = "";
 
 	private AnimatedSprite2D Sprite2D;
+
+	public int health = 1;
 	
 
 	public override void _Ready()
@@ -23,9 +25,10 @@ public partial class main_character : CharacterBody2D
 	public override void _PhysicsProcess(double delta)
 	{
 		//Teleport the player to the start position.
-		if (this.Position.Y >= 1112)
+		if (this.Position.Y >= 1110 || this.health == 0)
 		{
-			this.Position = new Vector2(204, 823);
+			this.health = 1;
+			this.Position = new Vector2(204, 800);
 		}
 
 		Vector2 velocity = Velocity;

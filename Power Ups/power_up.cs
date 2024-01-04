@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class power_up : Area2D
+public abstract partial class power_up : Area2D
 {
 	public string name = "test";
 	public main_character player_node;
@@ -18,7 +18,9 @@ public partial class power_up : Area2D
 	}
 	private void OnBodyEntered(Node2D body)
 	{
-	this.QueueFree();
-	GD.Print("aaaa");
+		this.PowerUpAction();
+		this.QueueFree();
 	}
-}
+
+	public abstract void PowerUpAction();
+}	

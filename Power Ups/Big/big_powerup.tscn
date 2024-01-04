@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdspdsbpxtpd8"]
+
+[ext_resource type="Script" path="res://Power Ups/Big/big_powerup.cs" id="1_lo4gr"]
+[ext_resource type="Texture2D" uid="uid://kputc1numeoc" path="res://icon.svg" id="2_os758"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djf33"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_os758")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3vp4"]
+size = Vector2(49, 38)
+
+[node name="BigPowerup" type="Area2D"]
+script = ExtResource("1_lo4gr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.445313, 0.421875)
+sprite_frames = SubResource("SpriteFrames_djf33")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_d3vp4")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
