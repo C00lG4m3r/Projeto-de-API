@@ -16,4 +16,9 @@ public partial class power_up : Area2D
 	{
 
 	}
+	private void OnBodyEntered(Node2D body)
+	{
+	this.QueueFree();
+	GD.Print("aaaa");
+	}
 }

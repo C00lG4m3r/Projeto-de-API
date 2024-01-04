@@ -7,9 +7,10 @@ public partial class main_character : CharacterBody2D
 	public const float Speed = 400.0f;
 	public const float JumpVelocity = -900.0f;
 
-	public string = "";
+	//public string = "";
 
 	private AnimatedSprite2D Sprite2D;
+	
 
 	public override void _Ready()
 	{
@@ -22,6 +23,7 @@ public partial class main_character : CharacterBody2D
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
+		
 
 		// Animations.
 		if (Math.Abs(velocity.X) > 1)
@@ -33,6 +35,7 @@ public partial class main_character : CharacterBody2D
 		{
 			Sprite2D.Animation = "default";
 		}
+		
 
 		// Gravity and jump animation.
 		if (!IsOnFloor())
