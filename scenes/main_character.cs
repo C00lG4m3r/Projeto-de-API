@@ -27,8 +27,12 @@ public partial class main_character : CharacterBody2D
 		//Teleport the player to the start position.
 		if (this.Position.Y >= 1110 || this.health == 0)
 		{
+<<<<<<< Updated upstream
 			this.health = 1;
 			this.Position = new Vector2(204, 800);
+=======
+			this.Position = new Vector2(190, 823);
+>>>>>>> Stashed changes
 		}
 
 		Vector2 velocity = Velocity;
