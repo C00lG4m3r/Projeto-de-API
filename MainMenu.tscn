@@ -773,18 +773,11 @@ theme_override_font_sizes/font_size = 50
 text = "Quit"
 
 [node name="Button2" type="Button" parent="."]
-<<<<<<< Updated upstream
-offset_left = 642.0
-offset_top = 287.0
-offset_right = 1286.0
-offset_bottom = 470.0
-=======
 offset_left = 462.0
 offset_top = 261.333
 offset_right = 850.0
 offset_bottom = 365.333
 theme_override_font_sizes/font_size = 50
->>>>>>> Stashed changes
 text = "Play"
 
 [node name="Button3" type="Button" parent="."]

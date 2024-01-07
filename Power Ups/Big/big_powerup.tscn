@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bdspdsbpxtpd8"]
 
 [ext_resource type="Script" path="res://Power Ups/Big/big_powerup.cs" id="1_lo4gr"]
-[ext_resource type="Texture2D" uid="uid://kputc1numeoc" path="res://icon.svg" id="2_os758"]
+[ext_resource type="Texture2D" uid="uid://dbk2vrpclaxne" path="res://icon.svg" id="2_os758"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_djf33"]
 animations = [{
