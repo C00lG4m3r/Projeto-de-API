@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://h06apv4m3wca"]
 
-[ext_resource type="Script" path="res://MainMenu.cs" id="1_ybeu7"]
-[ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Terrain (16x16).png" id="2_aw7wj"]
-[ext_resource type="Texture2D" uid="uid://h7jggy4ca1or" path="res://Background/Underwater/Underwaterlands_Tile_Set.png" id="3_ynnv4"]
-[ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://Jump (32x32).png" id="4_dtlcy"]
+[ext_resource type="Script" path="res://MainMenu/MainMenu.cs" id="1_8owok"]
+[ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_ybh48"]
+[ext_resource type="Texture2D" uid="uid://h7jggy4ca1or" path="res://Background/Blocks/Underwaterlands_Tile_Set.png" id="3_ayrou"]
+[ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="4_nrcn7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56n4a"]
-texture = ExtResource("2_aw7wj")
+texture = ExtResource("2_ybh48")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -153,7 +153,7 @@ texture = ExtResource("2_aw7wj")
 20:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yrxai"]
-texture = ExtResource("3_ynnv4")
+texture = ExtResource("3_ayrou")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -757,7 +757,7 @@ sources/1 = SubResource("TileSetAtlasSource_yrxai")
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, 1)
 scale = Vector2(1.5, 1.5)
-script = ExtResource("1_ybeu7")
+script = ExtResource("1_8owok")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4i53j")
@@ -815,13 +815,13 @@ text = "voltar"
 texture_filter = 1
 position = Vector2(224.667, 276.667)
 scale = Vector2(7.23958, 6.73958)
-texture = ExtResource("4_dtlcy")
+texture = ExtResource("4_nrcn7")
 
 [node name="Froggie2" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1060, 279.333)
 scale = Vector2(7.23958, 6.73958)
-texture = ExtResource("4_dtlcy")
+texture = ExtResource("4_nrcn7")
 flip_h = true
 
 [node name="LineEdit" type="LineEdit" parent="."]

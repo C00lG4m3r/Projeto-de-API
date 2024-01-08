@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tmi6jxcvd4ub"
-path="res://.godot/imported/Idle_BG1 (32x32).png-f17fe378a56acf46a797227974195f41.ctex"
+uid="uid://2s25mntpk2p3"
+path="res://.godot/imported/Underwaterlands_16x16_128x128_3.png-c9425645053358ed4bf68548a9377fed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Idle_BG1 (32x32).png"
-dest_files=["res://.godot/imported/Idle_BG1 (32x32).png-f17fe378a56acf46a797227974195f41.ctex"]
+source_file="res://Background/Blocks/Underwaterlands_16x16_128x128_3.png"
+dest_files=["res://.godot/imported/Underwaterlands_16x16_128x128_3.png-c9425645053358ed4bf68548a9377fed.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bljyp8arjanru"
-path="res://.godot/imported/Jump_BG1 (32x32).png-f889184b037ef492eee6a74024f7519c.ctex"
+uid="uid://b1533dn6aaqbs"
+path="res://.godot/imported/Underwaterlands_8x8_128x128.png-0e3bf5e0d3e048164b92406b492ee499.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Jump_BG1 (32x32).png"
-dest_files=["res://.godot/imported/Jump_BG1 (32x32).png-f889184b037ef492eee6a74024f7519c.ctex"]
+source_file="res://Background/Blocks/Underwaterlands_8x8_128x128.png"
+dest_files=["res://.godot/imported/Underwaterlands_8x8_128x128.png-0e3bf5e0d3e048164b92406b492ee499.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gavniddsyhhw"
-path="res://.godot/imported/Jump (32x32).png-91bf01789c567d31f5c28cd22911709b.ctex"
+uid="uid://tmoaisuru3lp"
+path="res://.godot/imported/bubble.png-186a3807485b8e77af3ad362d15a18bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Jump (32x32).png"
-dest_files=["res://.godot/imported/Jump (32x32).png-91bf01789c567d31f5c28cd22911709b.ctex"]
+source_file="res://Background/Underwater/bubble.png"
+dest_files=["res://.godot/imported/bubble.png-186a3807485b8e77af3ad362d15a18bb.ctex"]
 
 [params]
 

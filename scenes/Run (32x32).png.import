@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1533dn6aaqbs"
-path="res://.godot/imported/Underwaterlands_8x8_128x128.png-d73faa993a7fa78e3cd4886bf811c27f.ctex"
+uid="uid://dd1ve1yl1d5gn"
+path="res://.godot/imported/Run (32x32).png-9363a332d6b841e1ed860efb2d8b5ac5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background/Underwater/Underwaterlands_8x8_128x128.png"
-dest_files=["res://.godot/imported/Underwaterlands_8x8_128x128.png-d73faa993a7fa78e3cd4886bf811c27f.ctex"]
+source_file="res://scenes/Run (32x32).png"
+dest_files=["res://.godot/imported/Run (32x32).png-9363a332d6b841e1ed860efb2d8b5ac5.ctex"]
 
 [params]
 
