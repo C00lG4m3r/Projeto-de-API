@@ -24,11 +24,11 @@ public partial class main_character : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		//Teleport the player to the start position.
-		if (this.Position.Y >= 1110 || this.health == 0)
+		//Teleport the player to the start position and reset health.
+		if (this.Position.Y >= 2726 || this.health == 0)
 		{
 			this.health = 1;
-			this.Position = new Vector2(204, 800);
+			this.Position = new Vector2(382, 705);
 		}
 
 		Vector2 velocity = Velocity;
