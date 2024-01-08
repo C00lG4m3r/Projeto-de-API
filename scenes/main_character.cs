@@ -51,6 +51,7 @@ public partial class main_character : CharacterBody2D
 		{
 			velocity.Y += gravity * (float)delta;
 		Sprite2D.Animation = "jumping";
+		gravity = 3500;
 		}
 	
 		// Handle Jump.
