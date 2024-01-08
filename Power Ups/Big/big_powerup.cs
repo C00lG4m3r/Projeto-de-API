@@ -10,5 +10,6 @@ public partial class big_powerup : power_up
 	public override void PowerUpAction()
 	{
 		this.player_node.health += 1;
+		
 	}
 }

@@ -8,6 +8,8 @@ public partial class main_character : CharacterBody2D
 	public const float JumpVelocity = -900.0f;
 	public bool IsSwimming;
 
+	public bool IsHighGravity;
+
 	//public string = "";
 
 	private AnimatedSprite2D Sprite2D;
@@ -25,6 +27,14 @@ public partial class main_character : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		//Health stages, scale.
+		if(health==2) 
+		{
+			this.Scale = new Vector2(1,1.4f);
+		} else
+		{
+			this.Scale = new Vector2(1,1);
+		}
 		//Teleport the player to the start position and reset health.
 		if (this.Position.Y >= 2726 || this.health == 0)
 		{
@@ -57,7 +67,10 @@ public partial class main_character : CharacterBody2D
 				{
 				velocity.Y += gravity * (float)delta * (float)0.6;
 				}
-			} else 
+			} else if (IsHighGravity) 
+			{
+				velocity.Y += gravity * (float)delta * (float)1.42857142857;
+			} else
 			{
 				velocity.Y += gravity * (float)delta;
 			}

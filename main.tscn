@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=23 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://b2nt817o4dyc6" path="res://Background/Cave/01 bg.png" id="1_6ytqb"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_cmnow"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dptv1yf0iyvf5" path="res://Background/Blocks/Underwaterlands_16x16_128x128_2.png" id="6_2rx8f"]
 [ext_resource type="Texture2D" uid="uid://2s25mntpk2p3" path="res://Background/Blocks/Underwaterlands_16x16_128x128_3.png" id="7_c155v"]
 [ext_resource type="Texture2D" uid="uid://h7jggy4ca1or" path="res://Background/Blocks/Underwaterlands_Tile_Set.png" id="8_ojex4"]
+[ext_resource type="Script" path="res://Water.cs" id="13_qe1bu"]
+[ext_resource type="Script" path="res://Temple.cs" id="14_frgb2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -3638,4 +3640,18 @@ limit_bottom = 2658
 limit_smoothed = true
 
 [node name="big_powerup" parent="." instance=ExtResource("4_5wu2q")]
-position = Vector2(1044, 613)
+position = Vector2(-1571, 703)
+
+[node name="Water" type="Area2D" parent="."]
+script = ExtResource("13_qe1bu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Water"]
+visible = false
+polygon = PackedVector2Array(-1463, 948, -1736, 2138, -1656, 2710, 2723, 2726, 3294, 1914, 3203, 974, 2709, 946, 2026, 950, 1946, 1001, 1778, 995, 1746, 1039, 1544, 1054, 825, 1056, 732, 1003, 502, 999, 412, 905, 162, 908, -38, 1018, -672, 1020, -1094, 950)
+
+[node name="Temple" type="Area2D" parent="."]
+script = ExtResource("14_frgb2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temple"]
+visible = false
+polygon = PackedVector2Array(-907, 320, -912, 617, -510, 971, -47, 974, 181, 882, 377, 885, 502, 967, 733, 967, 897, 1017, 1289, 1017, 1418, 1049, 1549, 992, 1553, 1024, 1735, 1024, 1799, 974, 1931, 974, 2016, 932, 2458, 932, 2999, 932, 3444, -469, 2165, -740, 454, -665, 162, -864, -308, -779)
