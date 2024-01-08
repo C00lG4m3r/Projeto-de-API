@@ -6,6 +6,7 @@ public partial class main_character : CharacterBody2D
 {
 	public const float Speed = 400.0f;
 	public const float JumpVelocity = -900.0f;
+	public bool IsSwimming;
 
 	//public string = "";
 
@@ -49,13 +50,21 @@ public partial class main_character : CharacterBody2D
 		// Gravity and jump animation.
 		if (!IsOnFloor())
 		{
-			velocity.Y += gravity * (float)delta;
 		Sprite2D.Animation = "jumping";
-		gravity = 3500;
-		}
+			if (IsSwimming)
+			{
+				if (velocity.Y < 300) 
+				{
+				velocity.Y += gravity * (float)delta * (float)0.6;
+				}
+			} else 
+			{
+				velocity.Y += gravity * (float)delta;
+			}
+		} 
 	
 		// Handle Jump.
-		if (Input.IsActionJustPressed("Jump") && IsOnFloor())
+		if (Input.IsActionJustPressed("Jump") && (IsOnFloor() || IsSwimming))
 		{
 			velocity.Y = JumpVelocity;
 		}
