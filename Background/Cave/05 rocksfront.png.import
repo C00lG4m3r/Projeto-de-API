@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckr5yq3mymgx0"
-path="res://.godot/imported/Underwater lands Tile Set 16x16.png-a5ca57b61d580a861eea0be764987115.ctex"
+uid="uid://e0h8fw3mbs0r"
+path="res://.godot/imported/05 rocksfront.png-845f80799b6adce6eb3a0db668fbbb92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background/Underwater/Underwater lands Tile Set 16x16.png"
-dest_files=["res://.godot/imported/Underwater lands Tile Set 16x16.png-a5ca57b61d580a861eea0be764987115.ctex"]
+source_file="res://Background/Cave/05 rocksfront.png"
+dest_files=["res://.godot/imported/05 rocksfront.png-845f80799b6adce6eb3a0db668fbbb92.ctex"]
 
 [params]
 
