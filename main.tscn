@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=20 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://bn5ko3ahpayrq" path="res://Background/PNG/sea_background.png" id="1_cuxpi"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Terrain (16x16).png" id="2_jt8os"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dptv1yf0iyvf5" path="res://Background/Underwater/Underwaterlands_16x16_128x128_2.png" id="5_x3dya"]
 [ext_resource type="Texture2D" uid="uid://2s25mntpk2p3" path="res://Background/Underwater/Underwaterlands_16x16_128x128_3.png" id="6_j5d15"]
 [ext_resource type="Texture2D" uid="uid://h7jggy4ca1or" path="res://Background/Underwater/Underwaterlands_Tile_Set.png" id="7_4xyfy"]
+[ext_resource type="Script" path="res://Water.cs" id="11_k0c0c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_jt8os")
@@ -3597,4 +3598,11 @@ limit_bottom = 2658
 limit_smoothed = true
 
 [node name="big_powerup" parent="." instance=ExtResource("4_5wu2q")]
-position = Vector2(1044, 613)
+position = Vector2(-1540, 702)
+
+[node name="Water" type="Area2D" parent="."]
+script = ExtResource("11_k0c0c")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Water"]
+visible = false
+polygon = PackedVector2Array(-1459, 927, -1754, 2269, -1516, 2582, -1259, 2735, 2708, 2692, 3193, 1978, 3146, 957, 2026, 957, 1938, 990, 1781, 1000, 1733, 1052, 757, 1050, 740, 1007, 488, 1004, 417, 914, 212, 912, -18, 1002, -546, 1012, -1000, 950, -1411, 954)
