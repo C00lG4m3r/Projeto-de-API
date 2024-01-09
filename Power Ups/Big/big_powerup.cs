@@ -9,7 +9,9 @@ public partial class big_powerup : power_up
 
 	public override void PowerUpAction()
 	{
-		this.player_node.health += 1;
-		
+		if (this.player_node.health < 2)
+		{
+		this.player_node.health = 2;
+		}
 	}
 }
