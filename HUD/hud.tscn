@@ -1,5 +1,46 @@
-[gd_scene format=3 uid="uid://bgcv6mhvvbqxf"]
+[gd_scene load_steps=2 format=3 uid="uid://bgcv6mhvvbqxf"]
+
+[ext_resource type="Script" path="res://HUD/hud.cs" id="1_7or70"]
 
 [node name="HUD" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_7or70")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" type="Button" parent="CanvasLayer"]
+offset_left = 1782.0
+offset_top = 5.0
+offset_right = 1916.0
+offset_bottom = 66.0
+text = "pause
+"
+
+[node name="Resume" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 670.0
+offset_top = 182.0
+offset_right = 1174.0
+offset_bottom = 429.0
+text = "Resume"
+
+[node name="Main Menu" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 681.0
+offset_top = 512.0
+offset_right = 1153.0
+offset_bottom = 727.0
+text = "Main Menu"
+
+[node name="Exit Game" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 685.0
+offset_top = 802.0
+offset_right = 1149.0
+offset_bottom = 975.0
+text = "Exit Game"
+
+[connection signal="pressed" from="CanvasLayer/Pause" to="." method="OnPausePressed"]
+[connection signal="pressed" from="CanvasLayer/Resume" to="." method="OnResumePressed"]
+[connection signal="pressed" from="CanvasLayer/Main Menu" to="." method="OnMainMenuPressed"]
+[connection signal="pressed" from="CanvasLayer/Exit Game" to="." method="OnExitGamePressed"]
