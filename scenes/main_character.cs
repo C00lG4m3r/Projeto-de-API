@@ -69,7 +69,7 @@ public partial class main_character : CharacterBody2D
 				}
 			} else if (IsHighGravity) 
 			{
-				velocity.Y += gravity * (float)delta * (float)1.42857142857;
+				velocity.Y += gravity * (float)delta * (float)1.35714285714;
 			} else
 			{
 				velocity.Y += gravity * (float)delta;
