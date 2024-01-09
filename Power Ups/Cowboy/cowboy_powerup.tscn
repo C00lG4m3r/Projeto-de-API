@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dideudxwnvogl"]
+
+[ext_resource type="Script" path="res://cowboy_powerup.cs" id="1_xe1j2"]
+[ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="2_hpd4o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ngmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hpd4o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3vp4"]
+size = Vector2(49, 38)
+
+[node name="cowboy_powerup" type="Area2D"]
+script = ExtResource("1_xe1j2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.499999, -0.499999)
+scale = Vector2(1.53125, 1.15625)
+sprite_frames = SubResource("SpriteFrames_6ngmd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d3vp4")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

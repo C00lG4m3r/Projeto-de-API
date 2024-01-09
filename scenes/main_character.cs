@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 public partial class main_character : CharacterBody2D
 {
 	public const float Speed = 400.0f;
-	public const float JumpVelocity = -900.0f;
+	public float JumpVelocity = -900.0f;
 	public bool IsSwimming;
 
 	public bool IsHighGravity;
@@ -67,12 +67,15 @@ public partial class main_character : CharacterBody2D
 				{
 				velocity.Y += gravity * (float)delta * (float)0.6;
 				}
+				JumpVelocity = -450.0f;
 			} else if (IsHighGravity) 
 			{
 				velocity.Y += gravity * (float)delta * (float)1.35714285714;
+				JumpVelocity = -900.0f;
 			} else
 			{
 				velocity.Y += gravity * (float)delta;
+				JumpVelocity = -900.0f;
 			}
 		} 
 	
