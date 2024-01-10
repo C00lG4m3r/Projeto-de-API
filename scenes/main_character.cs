@@ -7,15 +7,9 @@ public partial class main_character : CharacterBody2D
 	public const float Speed = 400.0f;
 	public float JumpVelocity = -900.0f;
 	public bool IsSwimming;
-
 	public bool IsHighGravity;
-
-	//public string = "";
-
 	private AnimatedSprite2D Sprite2D;
-
 	public int health = 1;
-	
 
 	public override void _Ready()
 	{
@@ -27,6 +21,8 @@ public partial class main_character : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+
+
 		//Health stages, scale.
 		if(health==2) 
 		{
@@ -35,6 +31,8 @@ public partial class main_character : CharacterBody2D
 		{
 			this.Scale = new Vector2(1,1);
 		}
+
+		
 		//Teleport the player to the start position and reset health.
 		if (this.Position.Y >= 2726 || this.health == 0)
 		{
@@ -79,11 +77,13 @@ public partial class main_character : CharacterBody2D
 			}
 		} 
 	
+
 		// Handle Jump.
 		if (Input.IsActionJustPressed("Jump") && (IsOnFloor() || IsSwimming))
 		{
 			velocity.Y = JumpVelocity;
 		}
+
 
 		// Directions and speed.
 		Vector2 direction = Input.GetVector("Left", "Right", "ui_up", "ui_down");
@@ -104,6 +104,7 @@ public partial class main_character : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 
+
 		//Flip the sprite based on the direction.
 		if (direction.X != 0) 
 		{
@@ -111,5 +112,4 @@ public partial class main_character : CharacterBody2D
 			Sprite2D.FlipH = isLeft;
 		}
 	}
-
 }
