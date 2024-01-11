@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dhkqeesx7qfv6"]
 
-[ext_resource type="Script" path="res://Power Ups/Cowboy/cowboy_powerup.cs" id="1_qrhf2"]
+[ext_resource type="Script" path="res://Power Ups/Ninja/ninja.cs" id="1_qrhf2"]
 [ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="2_lrrpe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6ngmd"]
