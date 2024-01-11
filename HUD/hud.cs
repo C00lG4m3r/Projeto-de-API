@@ -18,6 +18,7 @@ public partial class hud : Node2D
 		GetNode<Godot.Button>("CanvasLayer/Resume").Visible = !GetNode<Godot.Button>("CanvasLayer/Resume").Visible;
 		GetNode<Godot.Button>("CanvasLayer/Main Menu").Visible = !GetNode<Godot.Button>("CanvasLayer/Main Menu").Visible;
 		GetNode<Godot.Button>("CanvasLayer/Exit Game").Visible = !GetNode<Godot.Button>("CanvasLayer/Exit Game").Visible;
+		GetNode<Godot.TileMap>("CanvasLayer/TileMap").Visible = !GetNode<Godot.Button>("CanvasLayer/TileMap").Visible;
 		}
 	}
 		public void OnPausePressed() 
@@ -27,6 +28,7 @@ public partial class hud : Node2D
 	GetNode<Godot.Button>("CanvasLayer/Resume").Visible = !GetNode<Godot.Button>("CanvasLayer/Resume").Visible;
 	GetNode<Godot.Button>("CanvasLayer/Main Menu").Visible = !GetNode<Godot.Button>("CanvasLayer/Main Menu").Visible;
 	GetNode<Godot.Button>("CanvasLayer/Exit Game").Visible = !GetNode<Godot.Button>("CanvasLayer/Exit Game").Visible;
+	GetNode<Godot.TileMap>("CanvasLayer/TileMap").Visible = !GetNode<Godot.TileMap>("CanvasLayer/TileMap").Visible;
 	}
 	private void OnResumePressed()
 	{
@@ -35,6 +37,7 @@ public partial class hud : Node2D
 	GetNode<Godot.Button>("CanvasLayer/Resume").Visible = false;
 	GetNode<Godot.Button>("CanvasLayer/Main Menu").Visible = false;
 	GetNode<Godot.Button>("CanvasLayer/Exit Game").Visible = false;
+	GetNode<Godot.TileMap>("CanvasLayer/TileMap").Visible = false;
 	}
 	private void OnMainMenuPressed()
 	{
