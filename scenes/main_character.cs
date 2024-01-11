@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 public partial class main_character : CharacterBody2D
@@ -10,12 +11,14 @@ public partial class main_character : CharacterBody2D
 		none
 	}
 	public Player_PowerUps current_powerup = Player_PowerUps.none;
+	public PackedScene ninja_star_scene = GD.Load<PackedScene>("../Projectiles/Shuriken");
 	public const float Speed = 400.0f;
 	public float JumpVelocity = -900.0f;
 	public bool IsSwimming;
 	public bool IsHighGravity;
 	private AnimatedSprite2D Sprite2D;
 	public int health = 1;
+	public Vector2 mouse_pos;
 
 	public override void _Ready()
 	{
@@ -118,6 +121,21 @@ public partial class main_character : CharacterBody2D
 			Sprite2D.FlipH = isLeft;
 		}
 
-		switch 
+
+		//Power Ups
+		switch (current_powerup)
+		{
+			case main_character.Player_PowerUps.ninja:
+			if (Input.IsActionJustPressed("Power"))
+			{
+				mouse_pos = GetGlobalMousePosition();
+				ninja_star star = ninja_star_scene.Instantiate<ninja_star>();
+				AddSibling(star);
+				star.Position = this.Position + this.Position.DirectionTo(mouse_pos) * 40;
+				star.direction = this.Position.DirectionTo(mouse_pos);
+				star.bullet_speed = 100;
+			}
+			break;
+		}		
 	}
 }
