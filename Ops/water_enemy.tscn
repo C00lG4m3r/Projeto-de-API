@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6hyvpqhhukmc"]
+
+[ext_resource type="Texture2D" uid="uid://kputc1numeoc" path="res://icon.svg" id="1_2e1lj"]
+[ext_resource type="Script" path="res://Ops/water_enemy.cs" id="1_6olag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4h2y"]
+size = Vector2(118, 117)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d2d3y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2e1lj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gt6ic"]
+size = Vector2(122, 120)
+
+[node name="Water Enemy" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_6olag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_g4h2y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d2d3y")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gt6ic")
+
+[connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]
