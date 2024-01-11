@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=24 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://b2nt817o4dyc6" path="res://Background/Cave/01 bg.png" id="1_6ytqb"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_cmnow"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://vpkotbfe0van" path="res://Background/Blocks/Cloud Tileset.png" id="11_gwajx"]
 [ext_resource type="Script" path="res://scenes/Water.cs" id="13_e1prn"]
 [ext_resource type="Script" path="res://scenes/Temple.cs" id="14_74h6j"]
+[ext_resource type="PackedScene" uid="uid://bgcv6mhvvbqxf" path="res://HUD/hud.tscn" id="15_ylq0i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -3772,3 +3773,6 @@ script = ExtResource("14_74h6j")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Temple"]
 visible = false
 polygon = PackedVector2Array(-907, 320, -912, 617, -510, 971, -47, 974, 181, 882, 377, 885, 502, 967, 733, 967, 897, 1017, 1289, 1017, 1418, 1049, 1549, 992, 1553, 1024, 1735, 1024, 1799, 974, 1931, 974, 2016, 932, 2458, 932, 2999, 932, 3444, -469, 2165, -740, 454, -665, 162, -864, -308, -779)
+
+[node name="HUD" parent="." instance=ExtResource("15_ylq0i")]
+position = Vector2(-2958, 153)
