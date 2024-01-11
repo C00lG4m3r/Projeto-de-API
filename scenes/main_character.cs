@@ -4,6 +4,12 @@ using System.Runtime.CompilerServices;
 
 public partial class main_character : CharacterBody2D
 {
+	public enum Player_PowerUps
+	{
+		ninja,
+		none
+	}
+	public Player_PowerUps current_powerup = Player_PowerUps.none;
 	public const float Speed = 400.0f;
 	public float JumpVelocity = -900.0f;
 	public bool IsSwimming;
@@ -32,7 +38,7 @@ public partial class main_character : CharacterBody2D
 			this.Scale = new Vector2(1,1);
 		}
 
-		
+
 		//Teleport the player to the start position and reset health.
 		if (this.Position.Y >= 2726 || this.health == 0)
 		{
@@ -111,5 +117,7 @@ public partial class main_character : CharacterBody2D
 			bool isLeft = velocity.X < 0;
 			Sprite2D.FlipH = isLeft;
 		}
+
+		switch 
 	}
 }

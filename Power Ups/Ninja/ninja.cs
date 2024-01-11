@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class cowboy_powerup : power_up
+public partial class ninja : power_up
 {
 	// Called when the node enters the scene tree for the first time.
 
@@ -9,6 +9,7 @@ public partial class cowboy_powerup : power_up
 
 	public override void PowerUpAction()
 	{
+		this.player_node.current_powerup = main_character.Player_PowerUps.ninja;
 		this.player_node.health = 3;
 		
 	}
