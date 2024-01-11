@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dknlqkaxdi6hj"]
+[gd_scene load_steps=5 format=3 uid="uid://dknlqkaxdi6hj"]
 
+[ext_resource type="Script" path="res://Projectiles/ninja_star.cs" id="1_2012c"]
 [ext_resource type="Texture2D" uid="uid://bulg47pp5ynwu" path="res://Projectiles/Shuriken.png" id="1_pkcjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3j3b"]
@@ -16,6 +17,8 @@ animations = [{
 }]
 
 [node name="Ninja Star" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_2012c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n3j3b")

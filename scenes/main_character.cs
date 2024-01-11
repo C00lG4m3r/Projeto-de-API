@@ -11,7 +11,7 @@ public partial class main_character : CharacterBody2D
 		none
 	}
 	public Player_PowerUps current_powerup = Player_PowerUps.none;
-	public PackedScene ninja_star_scene = GD.Load<PackedScene>("../Projectiles/Shuriken");
+	public PackedScene ninja_star_scene = GD.Load<PackedScene>("res://Projectiles/ninja_star.tscn");
 	public const float Speed = 400.0f;
 	public float JumpVelocity = -900.0f;
 	public bool IsSwimming;
@@ -133,7 +133,7 @@ public partial class main_character : CharacterBody2D
 				AddSibling(star);
 				star.Position = this.Position + this.Position.DirectionTo(mouse_pos) * 40;
 				star.direction = this.Position.DirectionTo(mouse_pos);
-				star.bullet_speed = 100;
+				star.bullet_speed = 10;
 			}
 			break;
 		}		
