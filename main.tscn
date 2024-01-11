@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=26 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://b2nt817o4dyc6" path="res://Background/Cave/01 bg.png" id="1_6ytqb"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_cmnow"]
