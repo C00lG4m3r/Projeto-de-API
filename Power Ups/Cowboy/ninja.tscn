@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dideudxwnvogl"]
+[gd_scene load_steps=5 format=3 uid="uid://dhkqeesx7qfv6"]
 
-[ext_resource type="Script" path="res://Power Ups/Cowboy/cowboy_powerup.cs" id="1_7xvfo"]
-[ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="2_hpd4o"]
+[ext_resource type="Script" path="res://Power Ups/Cowboy/cowboy_powerup.cs" id="1_qrhf2"]
+[ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="2_lrrpe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6ngmd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_hpd4o")
+"texture": ExtResource("2_lrrpe")
 }],
 "loop": true,
 "name": &"default",
@@ -17,8 +17,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3vp4"]
 size = Vector2(49, 38)
 
-[node name="cowboy_powerup" type="Area2D"]
-script = ExtResource("1_7xvfo")
+[node name="ninja" type="Area2D"]
+script = ExtResource("1_qrhf2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.499999, -0.499999)

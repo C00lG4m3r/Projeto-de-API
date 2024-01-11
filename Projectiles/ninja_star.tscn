@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bopvd6b8uwocx"]
+[gd_scene load_steps=2 format=3 uid="uid://dknlqkaxdi6hj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3j3b"]
 
-[node name="Bullet" type="Area2D"]
+[node name="Ninja Star" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n3j3b")

@@ -1,4 +1,5 @@
 using Godot;
+using GodotPlugins.Game;
 using System;
 
 public partial class hud : Node2D
@@ -39,6 +40,7 @@ public partial class hud : Node2D
 	private void OnMainMenuPressed()
 	{
 	GetTree().ChangeSceneToFile("res://MainMenu/MainMenu.tscn");
+	GetTree().Paused = !GetTree().Paused;
 	}
 	private void OnExitGamePressed()
 	{
