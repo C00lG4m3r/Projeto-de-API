@@ -833,6 +833,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
 text = "The Adventures of Froggie"
 alignment = 1
+editable = false
 flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
