@@ -16,6 +16,7 @@ public partial class main_character : CharacterBody2D
 	public float JumpVelocity = -900.0f;
 	public bool IsSwimming;
 	public bool IsHighGravity;
+	public bool IsLowGravity;
 	private AnimatedSprite2D Sprite2D;
 	public int health = 1;
 	public Vector2 mouse_pos;
@@ -78,6 +79,10 @@ public partial class main_character : CharacterBody2D
 			} else if (IsHighGravity) 
 			{
 				velocity.Y += gravity * (float)delta * (float)1.35714285714;
+				JumpVelocity = -900.0f;
+			} else if (IsLowGravity)
+			{
+				velocity.Y += gravity * (float)delta * (float)0.57142857142;
 				JumpVelocity = -900.0f;
 			} else
 			{
