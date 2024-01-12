@@ -17,7 +17,7 @@
 [ext_resource type="Script" path="res://scenes/Sky.cs" id="14_yyjx7"]
 [ext_resource type="PackedScene" uid="uid://bgcv6mhvvbqxf" path="res://HUD/hud.tscn" id="15_ylq0i"]
 [ext_resource type="PackedScene" uid="uid://dhkqeesx7qfv6" path="res://Power Ups/Ninja/ninja.tscn" id="16_6fnj5"]
-[ext_resource type="PackedScene" uid="uid://c6hyvpqhhukmc" path="res://Ops/water_enemy.tscn" id="17_4lkx8"]
+[ext_resource type="PackedScene" uid="uid://dm5g5j3n4m82v" path="res://Ops/temple_enemy.tscn" id="18_igktw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -3783,7 +3783,7 @@ visible = false
 polygon = PackedVector2Array(-1832, -6457, 4457, -6462, 4452, -3922, 2833, -2948, 1680, -2899, 1292, -2906, 376, -2656, -1834, -2660)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_e1wr0")]
-position = Vector2(1461, -2864)
+position = Vector2(-1790, 571)
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 limit_left = -1820
@@ -3798,5 +3798,5 @@ position = Vector2(-2958, 153)
 [node name="ninja" parent="." instance=ExtResource("16_6fnj5")]
 position = Vector2(-1542, 696)
 
-[node name="Water Enemy" parent="." instance=ExtResource("17_4lkx8")]
-position = Vector2(354, 2066)
+[node name="Temple Enemy" parent="." instance=ExtResource("18_igktw")]
+position = Vector2(-894, 1936)
