@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://h06apv4m3wca"]
+[gd_scene load_steps=9 format=3 uid="uid://h06apv4m3wca"]
 
 [ext_resource type="Script" path="res://MainMenu/MainMenu.cs" id="1_8owok"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_ybh48"]
 [ext_resource type="Texture2D" uid="uid://h7jggy4ca1or" path="res://Background/Blocks/Underwaterlands_Tile_Set.png" id="3_ayrou"]
 [ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="4_nrcn7"]
+[ext_resource type="AudioStream" uid="uid://l6f7q85cmso1" path="res://Sounds/27 - Chill.ogg" id="5_0q387"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56n4a"]
 texture = ExtResource("2_ybh48")
@@ -829,12 +830,15 @@ offset_left = 142.667
 offset_top = 62.0
 offset_right = 1143.67
 offset_bottom = 211.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 70
 text = "The Adventures of Froggie"
 alignment = 1
 editable = false
 flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_0q387")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
