@@ -1,32 +1,152 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0cxi80i78iy7"]
+[gd_scene load_steps=22 format=3 uid="uid://c0cxi80i78iy7"]
 
 [ext_resource type="Script" path="res://Power Ups/power_up.cs" id="1_3lppr"]
-[ext_resource type="Texture2D" uid="uid://kputc1numeoc" path="res://icon.svg" id="2_qgjtk"]
+[ext_resource type="Texture2D" uid="uid://x275cnn6o3m3" path="res://Power Ups/Animations/Apple.png" id="2_bt3gx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6tvf"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekppx"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sieph"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gnlx"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwan2"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux1hv"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_binq4"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcm3f"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i55xy"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4171h"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6541"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vrrb"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cf4h"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl3w6"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2l36"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ximw"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nsan"]
+atlas = ExtResource("2_bt3gx")
+region = Rect2(512, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ttgp0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qgjtk")
+"texture": SubResource("AtlasTexture_r6tvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekppx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sieph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gnlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwan2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux1hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_binq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcm3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i55xy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4171h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6541")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vrrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cf4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bl3w6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2l36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ximw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nsan")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"Apple",
+"speed": 18.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6oe2"]
-size = Vector2(49, 38)
+size = Vector2(9, 10)
 
 [node name="PowerUp" type="Area2D"]
 position = Vector2(104, 104)
 script = ExtResource("1_3lppr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.445313, 0.421875)
+position = Vector2(3.4375, 3.125)
+scale = Vector2(0.660157, 0.617188)
 sprite_frames = SubResource("SpriteFrames_ttgp0")
+animation = &"Apple"
+autoplay = "Apple"
+frame_progress = 0.984182
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(3.5, 2)
 shape = SubResource("RectangleShape2D_f6oe2")
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]
