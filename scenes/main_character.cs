@@ -7,6 +7,7 @@ public partial class main_character : CharacterBody2D
 {
 	public enum Player_PowerUps
 	{
+		big_powerup,
 		ninja,
 		none
 	}
@@ -39,15 +40,18 @@ public partial class main_character : CharacterBody2D
 		if(health==2) 
 		{
 			this.Scale = new Vector2(1,1.4f);
+			current_powerup = main_character.Player_PowerUps.big_powerup;
+		} else if (health == 1)
+		{
+			current_powerup = main_character.Player_PowerUps.none;
 		} else
 		{
 			this.Scale = new Vector2(1,1);
 		}
 
-
-		//Teleport the player to the start position and reset health.
-		if (this.Position.Y >= 2726 || this.health <= 0)
+		if (health >= 2)
 		{
+			Speed = 410f;
 		}
 
 		Vector2 velocity = Velocity;

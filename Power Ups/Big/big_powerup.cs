@@ -9,9 +9,10 @@ public partial class big_powerup : power_up
 
 	public override void PowerUpAction()
 	{
+		player_node.current_powerup = main_character.Player_PowerUps.big_powerup;
 		if (this.player_node.health < 2)
 		{
-		this.player_node.health = 2;
+		player_node.health = 2;
 		}
 	}
 }
