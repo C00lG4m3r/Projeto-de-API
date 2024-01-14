@@ -3,7 +3,6 @@ using System;
 
 public abstract partial class power_up : Area2D
 {
-	public string name = "test";
 	public main_character player_node;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()

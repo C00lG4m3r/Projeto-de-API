@@ -11,6 +11,5 @@ public partial class ninja : power_up
 	{
 		this.player_node.current_powerup = main_character.Player_PowerUps.ninja;
 		this.player_node.health = 3;
-		
 	}
 }
