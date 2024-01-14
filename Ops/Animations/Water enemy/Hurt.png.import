@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctf1r7g7l44x2"
-path="res://.godot/imported/Bullet Pieces.png-2bbf740f6155ac96413e8849bf9a50e6.ctex"
+uid="uid://lp3eyg2agm7r"
+path="res://.godot/imported/Hurt.png-e5ae4c381eeeb63d4d89791a1fe4a090.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ops/Animations/Bullet Pieces.png"
-dest_files=["res://.godot/imported/Bullet Pieces.png-2bbf740f6155ac96413e8849bf9a50e6.ctex"]
+source_file="res://Ops/Animations/Water enemy/Hurt.png"
+dest_files=["res://.godot/imported/Hurt.png-e5ae4c381eeeb63d4d89791a1fe4a090.ctex"]
 
 [params]
 

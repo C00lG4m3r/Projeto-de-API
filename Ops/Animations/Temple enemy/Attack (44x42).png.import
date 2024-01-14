@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://44kg0ilyuir3"
-path="res://.godot/imported/Hit (44x42).png-0b26dacb5ae80c717209e105fe16ae48.ctex"
+uid="uid://dhxq6m8ud0nad"
+path="res://.godot/imported/Attack (44x42).png-f72cf16f5407ec858ae8e3eff56363a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ops/Animations/Hit (44x42).png"
-dest_files=["res://.godot/imported/Hit (44x42).png-0b26dacb5ae80c717209e105fe16ae48.ctex"]
+source_file="res://Ops/Animations/Temple enemy/Attack (44x42).png"
+dest_files=["res://.godot/imported/Attack (44x42).png-f72cf16f5407ec858ae8e3eff56363a5.ctex"]
 
 [params]
 

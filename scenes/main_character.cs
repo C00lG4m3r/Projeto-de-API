@@ -48,6 +48,8 @@ public partial class main_character : CharacterBody2D
 		//Teleport the player to the start position and reset health.
 		if (this.Position.Y >= 2726 || this.health <= 0)
 		{
+			this.health = 1;
+			this.Position = new Vector2(-1767, 582);
 		}
 
 		Vector2 velocity = Velocity;

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2flahbbayaex"
-path="res://.godot/imported/Idle (44x42).png-8dc3725b9e7ee944c1319add04f80a38.ctex"
+uid="uid://c6xlctgekvh5n"
+path="res://.godot/imported/Attack.png-1b3a079c533c3634e9bf682c56875bc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ops/Animations/Idle (44x42).png"
-dest_files=["res://.godot/imported/Idle (44x42).png-8dc3725b9e7ee944c1319add04f80a38.ctex"]
+source_file="res://Ops/Animations/Water enemy/Attack.png"
+dest_files=["res://.godot/imported/Attack.png-1b3a079c533c3634e9bf682c56875bc0.ctex"]
 
 [params]
 
