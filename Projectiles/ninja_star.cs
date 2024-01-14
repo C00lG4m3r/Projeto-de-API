@@ -15,5 +15,9 @@ public partial class ninja_star : Area2D
 	public override void _Process(double delta)
 	{
 		this.Position += this.direction * bullet_speed;
+		if (this.Position.X < -1800 || this.Position.X > 4400)
+		{
+			QueueFree();
+		}
 	}
 }

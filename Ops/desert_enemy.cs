@@ -20,7 +20,7 @@ public partial class desert_enemy : CharacterBody2D
 	{
 		elapsed_time += delta;
 		Vector2 velocity = Velocity;
-		if (-2600 <= player_node.Position.Y && player_node.Position.Y <= -700 && elapsed_time > 3)
+		if (-2600 <= player_node.Position.Y && player_node.Position.Y <= -700 && elapsed_time > 8)
 		{
 			player_pos = GetNode<main_character>("..//CharacterBody2D").Position;
 			var direction = this.Position.DirectionTo(player_node.Position);

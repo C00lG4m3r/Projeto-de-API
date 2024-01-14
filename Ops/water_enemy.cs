@@ -5,6 +5,7 @@ public partial class water_enemy : CharacterBody2D
 {
 	public main_character player_node;
 	public float Speed = 300.0f;
+	public double elapsed_time;
 	
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -16,7 +17,7 @@ public partial class water_enemy : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-
+		elapsed_time += delta;
 		//Player Tracking
 		Vector2 velocity = Velocity;
 		if(this.Position.DistanceTo(player_node.Position) < 750)
@@ -24,8 +25,16 @@ public partial class water_enemy : CharacterBody2D
 			var direction = this.Position.DirectionTo(player_node.Position);
 			velocity = direction * Speed;
 		}
-		
-		
+		var overlapping_areas = GetNode<Area2D>("./Area2D").GetOverlappingAreas();
+		foreach (Area2D area in overlapping_areas)
+		{
+			var player = area.GetParent() as main_character;
+			if (player != null && elapsed_time > 1) 
+			{
+				player.health -= 1;
+				elapsed_time = 0;
+			}
+		}
 
 		Velocity = velocity;
 		MoveAndSlide();
