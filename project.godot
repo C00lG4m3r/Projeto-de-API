@@ -61,4 +61,4 @@ Power={
 
 [physics]
 
-2d/default_gravity=1000.0
+2d/default_gravity=3500.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c6hyvpqhhukmc"]
 
-[ext_resource type="Texture2D" uid="uid://dbk2vrpclaxne" path="res://icon.svg" id="1_2e1lj"]
+[ext_resource type="Texture2D" uid="uid://kputc1numeoc" path="res://icon.svg" id="1_2e1lj"]
 [ext_resource type="Script" path="res://Ops/water_enemy.cs" id="1_6olag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4h2y"]

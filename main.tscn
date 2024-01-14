@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=34 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://b2nt817o4dyc6" path="res://Background/Cave/01 bg.png" id="1_6ytqb"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_cmnow"]
@@ -19,7 +19,9 @@
 [ext_resource type="Script" path="res://scenes/Sky.cs" id="14_yyjx7"]
 [ext_resource type="PackedScene" uid="uid://bgcv6mhvvbqxf" path="res://HUD/hud.tscn" id="15_ylq0i"]
 [ext_resource type="PackedScene" uid="uid://dhkqeesx7qfv6" path="res://Power Ups/Ninja/ninja.tscn" id="16_6fnj5"]
+[ext_resource type="Script" path="res://scenes/Space.cs" id="17_5e35j"]
 [ext_resource type="Script" path="res://scenes/Spikes.cs" id="18_y6t7o"]
+[ext_resource type="PackedScene" uid="uid://burwbqcmdfqve" path="res://DeathScreen/death_screen.tscn" id="19_urfkq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -5011,8 +5013,15 @@ script = ExtResource("14_yyjx7")
 visible = false
 polygon = PackedVector2Array(-1832, -6457, 4457, -6462, 4452, -3922, 2833, -2948, 1680, -2899, 1292, -2906, 376, -2656, -1834, -2660)
 
+[node name="Space" type="Area2D" parent="."]
+script = ExtResource("17_5e35j")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Space"]
+visible = false
+polygon = PackedVector2Array(-1862, -6461, 4469, -6461, 4475, -11962, -1841, -11955)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_e1wr0")]
-position = Vector2(-1764, 581)
+position = Vector2(-1778, 564)
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 limit_left = -1820
@@ -5020,9 +5029,6 @@ limit_top = -11858
 limit_right = 4448
 limit_bottom = 2658
 limit_smoothed = true
-
-[node name="HUD" parent="." instance=ExtResource("15_ylq0i")]
-position = Vector2(-2958, 153)
 
 [node name="ninja" parent="." instance=ExtResource("16_6fnj5")]
 position = Vector2(-1542, 696)
@@ -5032,3 +5038,9 @@ script = ExtResource("18_y6t7o")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spikes"]
 polygon = PackedVector2Array(1097, 316, 1094, 550, 1145, 598, 1381, 601, 1432, 548, 1433, 308, 1379, 257, 1152, 259)
+
+[node name="HUD" parent="." instance=ExtResource("15_ylq0i")]
+position = Vector2(-2958, 153)
+
+[node name="DeathScreen" parent="." instance=ExtResource("19_urfkq")]
+position = Vector2(-3295, 234)

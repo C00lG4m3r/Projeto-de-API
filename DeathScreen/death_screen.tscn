@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://burwbqcmdfqve"]
+
+[ext_resource type="Script" path="res://DeathScreen/death_screen.cs" id="1_bt4vb"]
+
+[node name="DeathScreen" type="Node2D"]
+script = ExtResource("1_bt4vb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Restart" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 818.0
+offset_top = 296.0
+offset_right = 990.0
+offset_bottom = 368.0
+text = "Restart
+"
+
+[node name="Main Menu" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 780.0
+offset_top = 430.0
+offset_right = 1052.0
+offset_bottom = 502.0
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 746.0
+offset_top = 580.0
+offset_right = 1114.0
+offset_bottom = 652.0
+text = "Quit
+"
+
+[node name="YOUDIED" type="LineEdit" parent="CanvasLayer"]
+visible = false
+offset_left = 560.0
+offset_top = 124.0
+offset_right = 1275.0
+offset_bottom = 261.0
+text = "YOU DIED!"
+alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Restart" to="." method="OnRestartPressed"]
+[connection signal="pressed" from="CanvasLayer/Main Menu" to="." method="OnMainMenuPressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="OnQuitPressed"]

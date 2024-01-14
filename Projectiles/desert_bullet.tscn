@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://qqes22swt7vm"]
+
+[ext_resource type="Script" path="res://Projectiles/desert_bullet.cs" id="1_n7hyx"]
+[ext_resource type="Texture2D" uid="uid://kputc1numeoc" path="res://icon.svg" id="1_sra6h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndyy7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_561wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sra6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Desert Bullet" type="Area2D"]
+script = ExtResource("1_n7hyx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ndyy7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_561wd")
