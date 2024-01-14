@@ -24,8 +24,8 @@ public partial class power_up_interactable : Area2D
 					Random _R = new Random ();
 					Player_PowerUps RandomEnumValue<Player_PowerUps> ()
 					{
-    					var pwr = Enum.GetValues (typeof (Player_PowerUps));
-    					return (Player_PowerUps) pwr.GetValue (_R.Next(pwr.Length));
+						var pwr = Enum.GetValues (typeof (Player_PowerUps));
+						return (Player_PowerUps) pwr.GetValue (_R.Next(pwr.Length));
 					}
 				}
 			}
