@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://h06apv4m3wca"]
+[gd_scene load_steps=10 format=3 uid="uid://h06apv4m3wca"]
 
 [ext_resource type="Script" path="res://MainMenu/MainMenu.cs" id="1_8owok"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_ybh48"]
@@ -755,6 +755,9 @@ texture = ExtResource("3_ayrou")
 sources/0 = SubResource("TileSetAtlasSource_56n4a")
 sources/1 = SubResource("TileSetAtlasSource_yrxai")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xy2w2"]
+bg_color = Color(0, 0, 0, 0.607843)
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, 1)
 scale = Vector2(1.5, 1.5)
@@ -789,29 +792,6 @@ offset_bottom = 491.0
 theme_override_font_sizes/font_size = 50
 text = "Instructions"
 
-[node name="Label" type="Label" parent="."]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = 1.0
-offset_right = 1284.0
-offset_bottom = 722.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-text = "Preparado para as aventuras que te esperam!?
-Podes te mover com as setas ou então com o wasd. E utiliza o espaço para saltar!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button4" type="Button" parent="."]
-visible = false
-offset_right = 86.0
-offset_bottom = 42.0
-text = "voltar"
-
 [node name="Froggie" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(224.667, 276.667)
@@ -824,6 +804,37 @@ position = Vector2(1060, 279.333)
 scale = Vector2(7.23958, 6.73958)
 texture = ExtResource("4_nrcn7")
 flip_h = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1284.0
+offset_bottom = 722.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_xy2w2")
+text = "Preparado para as aventuras que te esperam!?
+Podes te mover com as setas ou então com o wasd. E utiliza o espaço para saltar!
+O objetivo é chegares até ao topo, mas cuidado que é muito fácil caires! Ah e cuidado com os inimigos, eles não te vão ajudar muito a concluires a tua missão.
+Mas não te preocupes que ao longo do mapa podes encontrar algumas caixas que deitam frutas mágicas que te vão dar poderes!
+Maça -                                                      Banana -                                          Cereja -                                                 
+Kiwi -                                                       Ananás -                                          Morango -
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="."]
+visible = false
+offset_right = 86.0
+offset_bottom = 42.0
+text = "voltar"
 
 [node name="LineEdit" type="LineEdit" parent="."]
 offset_left = 142.667
