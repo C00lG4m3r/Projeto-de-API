@@ -5,6 +5,7 @@ public partial class temple_enemy : CharacterBody2D
 {
 	public main_character player_node;
 	public Vector2 player_pos;
+	public double elapsed_time;
 	public PackedScene temple_bullet_scene = GD.Load<PackedScene>("res://Projectiles/temple_bullet.tscn");
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -17,8 +18,9 @@ public partial class temple_enemy : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		elapsed_time += delta;
 		Vector2 velocity = Velocity;
-				if(this.Position.DistanceTo(player_node.Position) < 750)
+				if(this.Position.DistanceTo(player_node.Position) < 750 && elapsed_time > 1)
 		{
 			player_pos = GetNode<main_character>("..//CharacterBody2D").Position;
 			var direction = this.Position.DirectionTo(player_node.Position);
@@ -27,6 +29,7 @@ public partial class temple_enemy : CharacterBody2D
 			shot.Position = this.Position + this.Position.DirectionTo(player_pos) * 40;
 			shot.direction = this.Position.DirectionTo(player_pos);
 			shot.bullet_speed = 10;
+			elapsed_time = 0;
 		}
 
 		Velocity = velocity;

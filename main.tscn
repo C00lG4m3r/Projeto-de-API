@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=35 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://b2nt817o4dyc6" path="res://Background/Cave/01 bg.png" id="1_6ytqb"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_cmnow"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" path="res://scenes/Space.cs" id="17_5e35j"]
 [ext_resource type="Script" path="res://scenes/Spikes.cs" id="18_y6t7o"]
 [ext_resource type="PackedScene" uid="uid://burwbqcmdfqve" path="res://DeathScreen/death_screen.tscn" id="19_urfkq"]
+[ext_resource type="PackedScene" uid="uid://5xedbb14q36u" path="res://Ops/desert_enemy.tscn" id="23_4uv2p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -5021,7 +5022,7 @@ visible = false
 polygon = PackedVector2Array(-1862, -6461, 4469, -6461, 4475, -11962, -1841, -11955)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_e1wr0")]
-position = Vector2(-1778, 564)
+position = Vector2(1728, -997)
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 limit_left = -1820
@@ -5044,3 +5045,6 @@ position = Vector2(-2958, 153)
 
 [node name="DeathScreen" parent="." instance=ExtResource("19_urfkq")]
 position = Vector2(-3295, 234)
+
+[node name="Desert Enemy" parent="." instance=ExtResource("23_4uv2p")]
+position = Vector2(2537, -975)

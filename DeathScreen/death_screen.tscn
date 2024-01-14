@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://DeathScreen/death_screen.cs" id="1_bt4vb"]
 
 [node name="DeathScreen" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_bt4vb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

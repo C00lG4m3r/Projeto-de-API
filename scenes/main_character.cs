@@ -13,6 +13,7 @@ public partial class main_character : CharacterBody2D
 	public Player_PowerUps current_powerup = Player_PowerUps.none;
 	public PackedScene ninja_star_scene = GD.Load<PackedScene>("res://Projectiles/ninja_star.tscn");
 	public float Speed = 400.0f;
+	public Vector2 knockbackvelocity;
 	public float JumpVelocity = -900.0f;
 	public bool IsSwimming;
 	public bool IsHighGravity;
@@ -47,8 +48,6 @@ public partial class main_character : CharacterBody2D
 		//Teleport the player to the start position and reset health.
 		if (this.Position.Y >= 2726 || this.health <= 0)
 		{
-			this.health = 1;
-			this.Position = new Vector2(382, 705);
 		}
 
 		Vector2 velocity = Velocity;
@@ -117,11 +116,13 @@ public partial class main_character : CharacterBody2D
 		}
 		else
 		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, 100);
+			velocity.X = Mathf.MoveToward(Velocity.X, 0, 400);
 		}
+		velocity += knockbackvelocity;
 
 		Velocity = velocity;
 		MoveAndSlide();
+		knockbackvelocity = Vector2.Zero;
 
 
 		//Flip the sprite based on the direction.
@@ -146,6 +147,6 @@ public partial class main_character : CharacterBody2D
 				star.bullet_speed = 10;
 			}
 			break;
-		}		
+		}
 	}
 }

@@ -19,7 +19,6 @@ public partial class Spikes : Area2D
 		var player = area.GetParent() as main_character;
 		if (player != null) 
 		{
-			GD.Print("coco");
 			player.health -= 1;
 		}
 		}

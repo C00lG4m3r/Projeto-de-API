@@ -7,21 +7,24 @@ public partial class death_screen : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Global_Player = GetNode<main_character>("../CharacterBody2D");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if(Global_Player.health <= 0) 
+		if(Global_Player.health <= 0 || Global_Player.Position.Y >= 2726) 
 		{
-		GetNode<Godot.Button>("DeathScreen/Restart").Visible = true;
-		GetNode<Godot.Button>("DeathScreen/MainMenu").Visible = true;
-		GetNode<Godot.Button>("DeathScreen/Quit").Visible = true;
-		GetNode<Godot.LineEdit>("DeathScreen/YOUDIED").Visible = true;
+		GetNode<Godot.Button>("CanvasLayer/Restart").Visible = true;
+		GetNode<Godot.Button>("CanvasLayer/Main Menu").Visible = true;
+		GetNode<Godot.Button>("CanvasLayer/Quit").Visible = true;
+		GetNode<Godot.LineEdit>("CanvasLayer/YOUDIED").Visible = true;
+		GetTree().Paused = true;
 		}
 	}
 	private void OnRestartPressed()
 	{
+	GetTree().Paused = false;
 	GetTree().ReloadCurrentScene();
 	}
 
