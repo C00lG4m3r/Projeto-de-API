@@ -17,7 +17,7 @@ public partial class power_up_interactable : Area2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		var overlapping_areas = GetNode<Area2D>("./Area2D").GetOverlappingAreas();
+		var overlapping_areas = GetOverlappingAreas();
 		foreach (Area2D area in overlapping_areas)
 		{
 			var player = area.GetParent() as main_character;
@@ -56,10 +56,11 @@ public partial class power_up_interactable : Area2D
 							AddSibling(big_powerup_instance2);
 						break;
 					}
+					QueueFree();
 				}
 			}
 		}
-		if (Position.DistanceTo(player_node.Position) < 300)
+		if (Position.DistanceTo(player_node.Position) < 850)
 		{
 			GetNode<Label>("Press E").Visible = true;
 		} else 
