@@ -20,7 +20,7 @@ public partial class temple_enemy : CharacterBody2D
 	{
 		elapsed_time += delta;
 		Vector2 velocity = Velocity;
-				if(this.Position.DistanceTo(player_node.Position) < 750 && elapsed_time > 10)
+				if(Position.DistanceTo(player_node.Position) < 750 && elapsed_time > 10)
 		{
 			player_pos = GetNode<main_character>("..//CharacterBody2D").Position;
 			var direction = this.Position.DirectionTo(player_node.Position);
@@ -35,10 +35,11 @@ public partial class temple_enemy : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
-		public void OnAreaEntered(Area2D area)
+	public void OnAreaEntered(Area2D area)
 	{
 		if (area is ninja_star)
 		{
+			GD.Print("coco");
 			QueueFree();
 		}
 	}

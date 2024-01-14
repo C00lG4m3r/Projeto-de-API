@@ -59,3 +59,12 @@ autoplay = "default"
 position = Vector2(217.5, 134.75)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_g6r1v")
+
+[node name="Press E" type="Label" parent="."]
+visible = false
+offset_left = -46.0
+offset_top = -42.0
+offset_right = 45.0
+offset_bottom = -16.0
+text = "Press E"
+horizontal_alignment = 1

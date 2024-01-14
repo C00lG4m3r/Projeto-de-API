@@ -22,7 +22,7 @@ public partial class temple_bullet : Area2D
 			foreach (Area2D area in overlapping_areas)
 		{
 		var player = area.GetParent() as main_character;
-			if (player != null && elapsed_time < 1) 
+			if (player != null && elapsed_time > 1) 
 			{
 				player.health -= 1;
 				elapsed_time = 0;

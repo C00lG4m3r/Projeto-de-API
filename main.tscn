@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://scenes/Spikes.cs" id="18_y6t7o"]
 [ext_resource type="PackedScene" uid="uid://burwbqcmdfqve" path="res://DeathScreen/death_screen.tscn" id="19_urfkq"]
 [ext_resource type="PackedScene" uid="uid://dm5g5j3n4m82v" path="res://Ops/temple_enemy.tscn" id="23_xb2ek"]
+[ext_resource type="PackedScene" uid="uid://kniswgl1b0fn" path="res://Power Ups/Interactable/power_up_interactable.tscn" id="24_urp34"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -5077,7 +5078,7 @@ limit_bottom = 2658
 limit_smoothed = true
 
 [node name="ninja" parent="." instance=ExtResource("16_6fnj5")]
-position = Vector2(-1019, 526)
+position = Vector2(-1076, 526)
 
 [node name="Spikes" type="Area2D" parent="."]
 script = ExtResource("18_y6t7o")

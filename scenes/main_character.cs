@@ -10,7 +10,6 @@ public partial class main_character : CharacterBody2D
 		big_powerup,
 		ninja,
 		flash,
-		bubble,
 		time_warp,
 		none
 	}
@@ -26,6 +25,7 @@ public partial class main_character : CharacterBody2D
 	private AnimatedSprite2D Sprite2D;
 	public int health = 1;
 	public int bubblehealth;
+	public bool time_warp;
 	public Vector2 mouse_pos;
 
 	public override void _Ready()
@@ -56,7 +56,7 @@ public partial class main_character : CharacterBody2D
 
 		if (health >= 2)
 		{
-			Speed = 410f;
+			Speed = 420f;
 		}
 
 		Vector2 velocity = Velocity;
@@ -157,13 +157,17 @@ public partial class main_character : CharacterBody2D
 			}
 			break;
 			case main_character.Player_PowerUps.flash:
-			Speed = 450f;
-			break;
-			case main_character.Player_PowerUps.bubble:
-			bubblehealth = 2;
+			Speed = 470f;
 			break;
 			case main_character.Player_PowerUps.time_warp:
-			Engine.TimeScale = 0.7;
+			time_warp=true;
+			if (time_warp)
+			{
+				Engine.TimeScale = 0.7;
+			} else 
+			{
+				Engine.TimeScale = 1;
+			}
 			break;
 		}
 	}

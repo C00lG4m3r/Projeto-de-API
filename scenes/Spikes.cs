@@ -22,6 +22,8 @@ public partial class Spikes : Area2D
 		if (player != null && elapsed_time > 1) 
 		{
 			player.health -= 1;
+			GD.Print("coco");
+			elapsed_time = 0;
 		}
 		}
 	}
