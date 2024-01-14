@@ -138,6 +138,7 @@ position = Vector2(104, 104)
 script = ExtResource("1_3lppr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(3.4375, 3.125)
 scale = Vector2(0.660157, 0.617188)
 sprite_frames = SubResource("SpriteFrames_ttgp0")

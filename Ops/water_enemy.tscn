@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://lp3eyg2agm7r" path="res://Ops/Animations/Water enemy/Hurt.png" id="5_r71hd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4h2y"]
-size = Vector2(53, 34.5)
+size = Vector2(198.5, 125.25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aw835"]
 atlas = ExtResource("2_5qt1s")
@@ -159,28 +159,28 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gt6ic"]
-size = Vector2(53, 34)
+size = Vector2(198.5, 126)
 
 [node name="Water Enemy" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_6olag")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(15.5, 22.75)
+position = Vector2(110.75, 158.625)
 shape = SubResource("RectangleShape2D_g4h2y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(22, 19)
-scale = Vector2(1.91667, 1.79167)
+position = Vector2(148, 152)
+scale = Vector2(7.375, 7)
 sprite_frames = SubResource("SpriteFrames_d2d3y")
 autoplay = "default"
-frame_progress = 0.204466
+frame_progress = 0.693404
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(15.5, 23)
+position = Vector2(110.75, 159)
 shape = SubResource("RectangleShape2D_gt6ic")
 
 [connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]

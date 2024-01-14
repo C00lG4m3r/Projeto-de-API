@@ -127,7 +127,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Pineapple",
-"speed": 23.0
+"speed": 18.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3vp4"]
@@ -137,11 +137,12 @@ size = Vector2(8, 11)
 script = ExtResource("1_lo4gr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(4, 4)
 scale = Vector2(0.628907, 0.679688)
 sprite_frames = SubResource("SpriteFrames_djf33")
 animation = &"Pineapple"
-frame_progress = 0.873066
+frame_progress = 0.218884
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 3.5)
