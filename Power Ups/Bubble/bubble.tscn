@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ns5v84uvco70"]
+
+[ext_resource type="Script" path="res://Power Ups/Bubble/bubble.cs" id="1_0s1qi"]
+
+[node name="Bubble" type="Area2D"]
+script = ExtResource("1_0s1qi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -15,11 +15,11 @@ public partial class death_screen : Node2D
 	{
 		if(Global_Player.health <= 0 || Global_Player.Position.Y >= 2726) 
 		{
-		GetNode<Godot.Button>("DeathScreen/Restart").Visible = true;
-		GetNode<Godot.Button>("DeathScreen/MainMenu").Visible = true;
-		GetNode<Godot.Button>("DeathScreen/Quit").Visible = true;
-		GetNode<Godot.LineEdit>("DeathScreen/YOUDIED").Visible = true;
-		GetNode<Godot.TileMap>("DeathScreen/TileMap").Visible = true;
+		GetNode<Godot.Button>("CanvasLayer/Restart").Visible = true;
+		GetNode<Godot.Button>("CanvasLayer/Main Menu").Visible = true;
+		GetNode<Godot.Button>("CanvasLayer/Quit").Visible = true;
+		GetNode<Godot.LineEdit>("CanvasLayer/YOUDIED").Visible = true;
+		GetNode<Godot.TileMap>("CanvasLayer/TileMap").Visible = true;
 		GetTree().Paused = true;
 		}
 	}

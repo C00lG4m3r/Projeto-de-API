@@ -20,7 +20,7 @@ public partial class temple_enemy : CharacterBody2D
 	{
 		elapsed_time += delta;
 		Vector2 velocity = Velocity;
-				if(this.Position.DistanceTo(player_node.Position) < 750 && elapsed_time > 1)
+				if(this.Position.DistanceTo(player_node.Position) < 750 && elapsed_time > 10)
 		{
 			player_pos = GetNode<main_character>("..//CharacterBody2D").Position;
 			var direction = this.Position.DirectionTo(player_node.Position);
@@ -28,7 +28,7 @@ public partial class temple_enemy : CharacterBody2D
 			AddSibling(shot);
 			shot.Position = this.Position + this.Position.DirectionTo(player_pos) * 40;
 			shot.direction = this.Position.DirectionTo(player_pos);
-			shot.bullet_speed = 10;
+			shot.bullet_speed = 1;
 			elapsed_time = 0;
 		}
 

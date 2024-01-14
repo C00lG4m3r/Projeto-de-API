@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb7fdpea3uo38"]
+
+[ext_resource type="Script" path="res://Power Ups/Time Warp/time_warp.cs" id="1_sof5u"]
+
+[node name="Time Warp" type="Area2D"]
+script = ExtResource("1_sof5u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

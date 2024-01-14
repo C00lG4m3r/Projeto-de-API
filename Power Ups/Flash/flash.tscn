@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm77mr7pie66a"]
+
+[ext_resource type="Script" path="res://Power Ups/Flash/flash.cs" id="1_xd375"]
+
+[node name="Flash" type="Area2D"]
+script = ExtResource("1_xd375")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -9,6 +9,9 @@ public partial class main_character : CharacterBody2D
 	{
 		big_powerup,
 		ninja,
+		flash,
+		bubble,
+		time_warp,
 		none
 	}
 	public Player_PowerUps current_powerup = Player_PowerUps.none;
@@ -22,6 +25,8 @@ public partial class main_character : CharacterBody2D
 	public bool IsSuperLowGravity;
 	private AnimatedSprite2D Sprite2D;
 	public int health = 1;
+	public bool bubble;
+	public int bubblehealth;
 	public Vector2 mouse_pos;
 
 	public override void _Ready()
@@ -151,6 +156,17 @@ public partial class main_character : CharacterBody2D
 				star.direction = this.Position.DirectionTo(mouse_pos);
 				star.bullet_speed = 10;
 			}
+			break;
+			case main_character.Player_PowerUps.flash:
+			Speed = 450f;
+			break;
+			case main_character.Player_PowerUps.bubble:
+			bubblehealth = 2;
+			bubble = true;
+			
+			break;
+			case main_character.Player_PowerUps.time_warp:
+			Engine.TimeScale = 0.7;
 			break;
 		}
 	}

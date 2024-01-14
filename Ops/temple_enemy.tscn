@@ -199,6 +199,7 @@ size = Vector2(42, 60)
 
 [node name="Temple Enemy" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+motion_mode = 1
 script = ExtResource("1_ueqrc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
