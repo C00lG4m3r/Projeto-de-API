@@ -23,7 +23,6 @@
 [ext_resource type="Script" path="res://scenes/Space.cs" id="17_5e35j"]
 [ext_resource type="Script" path="res://scenes/Spikes.cs" id="18_y6t7o"]
 [ext_resource type="PackedScene" uid="uid://burwbqcmdfqve" path="res://DeathScreen/death_screen.tscn" id="19_urfkq"]
-[ext_resource type="PackedScene" uid="uid://dm5g5j3n4m82v" path="res://Ops/temple_enemy.tscn" id="23_xb2ek"]
 [ext_resource type="PackedScene" uid="uid://kniswgl1b0fn" path="res://Power Ups/Interactable/power_up_interactable.tscn" id="24_urp34"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
@@ -5092,5 +5091,5 @@ position = Vector2(-2958, 153)
 [node name="DeathScreen" parent="." instance=ExtResource("19_urfkq")]
 position = Vector2(-3295, 234)
 
-[node name="Temple Enemy" parent="." instance=ExtResource("23_xb2ek")]
-position = Vector2(1552, -110)
+[node name="Power Up Interactable" parent="." instance=ExtResource("24_urp34")]
+position = Vector2(-157, 636)
