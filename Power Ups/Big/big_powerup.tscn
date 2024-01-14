@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://bdspdsbpxtpd8"]
+[gd_scene load_steps=29 format=3 uid="uid://bdspdsbpxtpd8"]
 
 [ext_resource type="Script" path="res://Power Ups/Big/big_powerup.cs" id="1_lo4gr"]
 [ext_resource type="Texture2D" uid="uid://c44w6p7d5a1sj" path="res://Power Ups/Animations/Pineapple.png" id="2_kh4br"]
+[ext_resource type="Texture2D" uid="uid://c1n1j786fvnu3" path="res://Power Ups/Animations/Collected.png" id="3_d7gan"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trymk"]
 atlas = ExtResource("2_kh4br")
@@ -71,6 +72,30 @@ region = Rect2(480, 0, 32, 32)
 atlas = ExtResource("2_kh4br")
 region = Rect2(512, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkups"]
+atlas = ExtResource("3_d7gan")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bymst"]
+atlas = ExtResource("3_d7gan")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5bqq"]
+atlas = ExtResource("3_d7gan")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3261s"]
+atlas = ExtResource("3_d7gan")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7ls3"]
+atlas = ExtResource("3_d7gan")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbrlw"]
+atlas = ExtResource("3_d7gan")
+region = Rect2(160, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_djf33"]
 animations = [{
 "frames": [{
@@ -128,6 +153,29 @@ animations = [{
 "loop": true,
 "name": &"Pineapple",
 "speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkups")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bymst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5bqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3261s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7ls3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbrlw")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 12.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3vp4"]
@@ -142,7 +190,8 @@ position = Vector2(4, 4)
 scale = Vector2(0.628907, 0.679688)
 sprite_frames = SubResource("SpriteFrames_djf33")
 animation = &"Pineapple"
-frame_progress = 0.218884
+autoplay = "Pineapple"
+frame_progress = 0.467877
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 3.5)

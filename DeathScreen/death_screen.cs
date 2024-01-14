@@ -20,6 +20,8 @@ public partial class death_screen : Node2D
 		GetNode<Godot.Button>("CanvasLayer/Quit").Visible = true;
 		GetNode<Godot.LineEdit>("CanvasLayer/YOUDIED").Visible = true;
 		GetNode<Godot.TileMap>("CanvasLayer/TileMap").Visible = true;
+		GetNode<Godot.Sprite2D>("CanvasLayer/Froggie 1").Visible = true;
+		GetNode<Godot.Sprite2D>("CanvasLayer/Froggie 2").Visible = true;
 		GetTree().Paused = true;
 		}
 	}

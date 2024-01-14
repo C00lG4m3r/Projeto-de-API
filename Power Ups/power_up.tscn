@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://c0cxi80i78iy7"]
+[gd_scene load_steps=29 format=3 uid="uid://c0cxi80i78iy7"]
 
 [ext_resource type="Script" path="res://Power Ups/power_up.cs" id="1_3lppr"]
 [ext_resource type="Texture2D" uid="uid://x275cnn6o3m3" path="res://Power Ups/Animations/Apple.png" id="2_bt3gx"]
+[ext_resource type="Texture2D" uid="uid://c1n1j786fvnu3" path="res://Power Ups/Animations/Collected.png" id="3_ryujq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r6tvf"]
 atlas = ExtResource("2_bt3gx")
@@ -71,6 +72,30 @@ region = Rect2(480, 0, 32, 32)
 atlas = ExtResource("2_bt3gx")
 region = Rect2(512, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_f43ul"]
+atlas = ExtResource("3_ryujq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwy8h"]
+atlas = ExtResource("3_ryujq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsyco"]
+atlas = ExtResource("3_ryujq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoat8"]
+atlas = ExtResource("3_ryujq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dbto"]
+atlas = ExtResource("3_ryujq")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbxtu"]
+atlas = ExtResource("3_ryujq")
+region = Rect2(160, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ttgp0"]
 animations = [{
 "frames": [{
@@ -128,10 +153,33 @@ animations = [{
 "loop": true,
 "name": &"Apple",
 "speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f43ul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwy8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsyco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoat8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dbto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbxtu")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6oe2"]
-size = Vector2(9, 10)
+[sub_resource type="CircleShape2D" id="CircleShape2D_oci1w"]
+radius = 4.0
 
 [node name="PowerUp" type="Area2D"]
 position = Vector2(104, 104)
@@ -139,15 +187,15 @@ script = ExtResource("1_3lppr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(3.4375, 3.125)
-scale = Vector2(0.660157, 0.617188)
+position = Vector2(5.93749, 4.62499)
+scale = Vector2(0.816406, 0.710938)
 sprite_frames = SubResource("SpriteFrames_ttgp0")
 animation = &"Apple"
 autoplay = "Apple"
-frame_progress = 0.984182
+frame_progress = 0.874772
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.5, 2)
-shape = SubResource("RectangleShape2D_f6oe2")
+position = Vector2(6, 4)
+shape = SubResource("CircleShape2D_oci1w")
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]

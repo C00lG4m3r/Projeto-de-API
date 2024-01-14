@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://dhkqeesx7qfv6"]
+[gd_scene load_steps=29 format=3 uid="uid://dhkqeesx7qfv6"]
 
 [ext_resource type="Script" path="res://Power Ups/Ninja/ninja.cs" id="1_qrhf2"]
 [ext_resource type="Texture2D" uid="uid://d1xvxodkiscfh" path="res://Power Ups/Animations/Bananas.png" id="2_ndbdp"]
+[ext_resource type="Texture2D" uid="uid://c1n1j786fvnu3" path="res://Power Ups/Animations/Collected.png" id="3_iylgs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h83sn"]
 atlas = ExtResource("2_ndbdp")
@@ -71,6 +72,30 @@ region = Rect2(480, 0, 32, 32)
 atlas = ExtResource("2_ndbdp")
 region = Rect2(512, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yfeg"]
+atlas = ExtResource("3_iylgs")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqt3h"]
+atlas = ExtResource("3_iylgs")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfs5c"]
+atlas = ExtResource("3_iylgs")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwfsx"]
+atlas = ExtResource("3_iylgs")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymvtt"]
+atlas = ExtResource("3_iylgs")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw0un"]
+atlas = ExtResource("3_iylgs")
+region = Rect2(160, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6ngmd"]
 animations = [{
 "frames": [{
@@ -126,8 +151,31 @@ animations = [{
 "texture": SubResource("AtlasTexture_y556k")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Banana",
 "speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yfeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqt3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfs5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwfsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymvtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw0un")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 12.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3vp4"]
@@ -141,7 +189,9 @@ texture_filter = 1
 position = Vector2(43, 34.5)
 scale = Vector2(4.25, 3.34375)
 sprite_frames = SubResource("SpriteFrames_6ngmd")
-frame_progress = 0.442163
+animation = &"Banana"
+autoplay = "Banana"
+frame_progress = 0.0794717
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(44.5, 29)
