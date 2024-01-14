@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dafty6d1lvoc3"
-path="res://.godot/imported/8.png-921ab29db73a5d75f441f3b18acd73d6.ctex"
+uid="uid://44kg0ilyuir3"
+path="res://.godot/imported/Hit (44x42).png-665fee29a848bd982208656d74e89ab6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Projectiles/Shuriken/8.png"
-dest_files=["res://.godot/imported/8.png-921ab29db73a5d75f441f3b18acd73d6.ctex"]
+source_file="res://Ops/Animations/Temple enemy/Hit (44x42).png"
+dest_files=["res://.godot/imported/Hit (44x42).png-665fee29a848bd982208656d74e89ab6.ctex"]
 
 [params]
 

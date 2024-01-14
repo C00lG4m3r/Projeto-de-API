@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqgr1hq1l6ata"
-path="res://.godot/imported/3.png-7dfa1d0bd936131a4677f7f94d469181.ctex"
+uid="uid://lp3eyg2agm7r"
+path="res://.godot/imported/Hurt.png-e5ae4c381eeeb63d4d89791a1fe4a090.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Projectiles/Shuriken/3.png"
-dest_files=["res://.godot/imported/3.png-7dfa1d0bd936131a4677f7f94d469181.ctex"]
+source_file="res://Ops/Animations/Water enemy/Hurt.png"
+dest_files=["res://.godot/imported/Hurt.png-e5ae4c381eeeb63d4d89791a1fe4a090.ctex"]
 
 [params]
 

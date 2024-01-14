@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhxq6m8ud0nad"
-path="res://.godot/imported/Attack (44x42).png-e6e917a8b5e259c53058952ec8d307f7.ctex"
+uid="uid://bqoxuiciqbbwo"
+path="res://.godot/imported/Bullet.png-55d04e124bb43c38d6f68f1c076ddfb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ops/Animations/Attack (44x42).png"
-dest_files=["res://.godot/imported/Attack (44x42).png-e6e917a8b5e259c53058952ec8d307f7.ctex"]
+source_file="res://Ops/Animations/Temple enemy/Bullet.png"
+dest_files=["res://.godot/imported/Bullet.png-55d04e124bb43c38d6f68f1c076ddfb3.ctex"]
 
 [params]
 
