@@ -1,99 +1,31 @@
-[gd_scene load_steps=25 format=3 uid="uid://dknlqkaxdi6hj"]
+[gd_scene load_steps=7 format=3 uid="uid://dknlqkaxdi6hj"]
 
 [ext_resource type="Script" path="res://Projectiles/ninja_star.cs" id="1_2012c"]
-[ext_resource type="Texture2D" uid="uid://bulg47pp5ynwu" path="res://Projectiles/Shuriken/Shuriken.png" id="2_c73xc"]
-[ext_resource type="Texture2D" uid="uid://f2cmqtrk8ri2" path="res://Projectiles/Shuriken/2.png" id="3_l5x7b"]
-[ext_resource type="Texture2D" uid="uid://dqgr1hq1l6ata" path="res://Projectiles/Shuriken/3.png" id="4_u76ab"]
-[ext_resource type="Texture2D" uid="uid://c1a2glyew6has" path="res://Projectiles/Shuriken/4.png" id="5_qylv8"]
-[ext_resource type="Texture2D" uid="uid://cbp68gj24007x" path="res://Projectiles/Shuriken/5.png" id="6_4dhu3"]
-[ext_resource type="Texture2D" uid="uid://myh21ryui05y" path="res://Projectiles/Shuriken/6.png" id="7_be7li"]
-[ext_resource type="Texture2D" uid="uid://bytnqrft30s53" path="res://Projectiles/Shuriken/7.png" id="8_265rd"]
-[ext_resource type="Texture2D" uid="uid://dafty6d1lvoc3" path="res://Projectiles/Shuriken/8.png" id="9_dk15f"]
-[ext_resource type="Texture2D" uid="uid://baji45hnxtdmg" path="res://Projectiles/Shuriken/9.png" id="10_1fsyx"]
-[ext_resource type="Texture2D" uid="uid://cq1uib0ttksro" path="res://Projectiles/Shuriken/11.png" id="11_bt1g1"]
-[ext_resource type="Texture2D" uid="uid://bhngj56otfv46" path="res://Projectiles/Shuriken/12.png" id="12_ppwde"]
-[ext_resource type="Texture2D" uid="uid://cej3kvbqky3jj" path="res://Projectiles/Shuriken/14.png" id="13_oy1ro"]
-[ext_resource type="Texture2D" uid="uid://d2ennop2nthvu" path="res://Projectiles/Shuriken/15.png" id="14_x32fe"]
-[ext_resource type="Texture2D" uid="uid://cq0gwlx8ljiqj" path="res://Projectiles/Shuriken/17.png" id="15_urmur"]
-[ext_resource type="Texture2D" uid="uid://bywh6x2aex5x0" path="res://Projectiles/Shuriken/16.png" id="16_os5hu"]
-[ext_resource type="Texture2D" uid="uid://huwojlv7fop0" path="res://Projectiles/Shuriken/18.png" id="17_fippm"]
-[ext_resource type="Texture2D" uid="uid://b2522cpkhnbw" path="res://Projectiles/Shuriken/19.png" id="18_a6q1m"]
-[ext_resource type="Texture2D" uid="uid://c4b6rqnsra2dy" path="res://Projectiles/Shuriken/20.png" id="19_q0o5f"]
-[ext_resource type="Texture2D" uid="uid://bw4yjbwl4tdkf" path="res://Projectiles/Shuriken/21.png" id="20_sl4ld"]
-[ext_resource type="Texture2D" uid="uid://cv5choouq7p1d" path="res://Projectiles/Shuriken/22.png" id="21_kewdp"]
-[ext_resource type="Texture2D" uid="uid://bopatp37kkmbm" path="res://Projectiles/Shuriken/23.png" id="22_s0w34"]
+[ext_resource type="Texture2D" uid="uid://dbdhoy73fmuov" path="res://Projectiles/Shuriken.png" id="2_l065b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3j3b"]
+size = Vector2(14.5, 14.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lggtc"]
+atlas = ExtResource("2_l065b")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r523"]
+atlas = ExtResource("2_l065b")
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rlwxj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_c73xc")
+"texture": SubResource("AtlasTexture_lggtc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_l5x7b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_u76ab")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_qylv8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_4dhu3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_be7li")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_265rd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_dk15f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_1fsyx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_bt1g1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_ppwde")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_oy1ro")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_x32fe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_urmur")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_os5hu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_fippm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_a6q1m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_q0o5f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_sl4ld")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_kewdp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_s0w34")
+"texture": SubResource("AtlasTexture_5r523")
 }],
 "loop": true,
 "name": &"default",
-"speed": 11.0
+"speed": 9.0
 }]
 
 [node name="Ninja Star" type="Area2D"]
@@ -101,9 +33,12 @@ scale = Vector2(2, 2)
 script = ExtResource("1_2012c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 1.25)
 shape = SubResource("RectangleShape2D_n3j3b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0.5, 0.75)
+scale = Vector2(1.0625, 1.09375)
 sprite_frames = SubResource("SpriteFrames_rlwxj")
-frame_progress = 0.172196
+frame_progress = 0.231267
