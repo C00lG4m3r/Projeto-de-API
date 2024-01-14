@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhngj56otfv46"
-path="res://.godot/imported/12.png-d8ed3ea6c85fdc6e083abe1d0fa0fa8a.ctex"
+uid="uid://dygxucuikh2mu"
+path="res://.godot/imported/Death.png-5fff7479e828f36eaef209237f295fcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Projectiles/Shuriken/12.png"
-dest_files=["res://.godot/imported/12.png-d8ed3ea6c85fdc6e083abe1d0fa0fa8a.ctex"]
+source_file="res://Ops/Animations/Water enemy/Death.png"
+dest_files=["res://.godot/imported/Death.png-5fff7479e828f36eaef209237f295fcf.ctex"]
 
 [params]
 

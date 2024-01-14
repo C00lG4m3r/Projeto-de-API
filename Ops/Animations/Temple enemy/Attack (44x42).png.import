@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bopatp37kkmbm"
-path="res://.godot/imported/23.png-97b180ea7b8ec7850117dd79c7135da8.ctex"
+uid="uid://dhxq6m8ud0nad"
+path="res://.godot/imported/Attack (44x42).png-f72cf16f5407ec858ae8e3eff56363a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Projectiles/Shuriken/23.png"
-dest_files=["res://.godot/imported/23.png-97b180ea7b8ec7850117dd79c7135da8.ctex"]
+source_file="res://Ops/Animations/Temple enemy/Attack (44x42).png"
+dest_files=["res://.godot/imported/Attack (44x42).png-f72cf16f5407ec858ae8e3eff56363a5.ctex"]
 
 [params]
 

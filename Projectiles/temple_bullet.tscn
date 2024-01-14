@@ -1,22 +1,22 @@
 [gd_scene load_steps=9 format=3 uid="uid://cec0o45b8jjpb"]
 
 [ext_resource type="Script" path="res://Projectiles/temple_bullet.cs" id="1_5dicw"]
-[ext_resource type="Texture2D" uid="uid://bqoxuiciqbbwo" path="res://Ops/Animations/Bullet.png" id="2_na7pp"]
-[ext_resource type="Texture2D" uid="uid://ctf1r7g7l44x2" path="res://Ops/Animations/Bullet Pieces.png" id="3_as128"]
+[ext_resource type="Texture2D" uid="uid://bqoxuiciqbbwo" path="res://Ops/Animations/Temple enemy/Bullet.png" id="2_hujxx"]
+[ext_resource type="Texture2D" uid="uid://ctf1r7g7l44x2" path="res://Ops/Animations/Temple enemy/Bullet Pieces.png" id="3_200de"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vcox"]
 size = Vector2(11, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cw6us"]
-atlas = ExtResource("2_na7pp")
+atlas = ExtResource("2_hujxx")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vd2s2"]
-atlas = ExtResource("3_as128")
+atlas = ExtResource("3_200de")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_07tf2"]
-atlas = ExtResource("3_as128")
+atlas = ExtResource("3_200de")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uib6w"]
@@ -49,6 +49,7 @@ position = Vector2(3.5, 4.5)
 shape = SubResource("RectangleShape2D_1vcox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(3.5, 4)
 scale = Vector2(1.15909, 1.19048)
 sprite_frames = SubResource("SpriteFrames_uib6w")
