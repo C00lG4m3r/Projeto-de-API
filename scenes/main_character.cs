@@ -25,7 +25,6 @@ public partial class main_character : CharacterBody2D
 	public bool IsSuperLowGravity;
 	private AnimatedSprite2D Sprite2D;
 	public int health = 1;
-	public bool bubble;
 	public int bubblehealth;
 	public Vector2 mouse_pos;
 
@@ -162,8 +161,6 @@ public partial class main_character : CharacterBody2D
 			break;
 			case main_character.Player_PowerUps.bubble:
 			bubblehealth = 2;
-			bubble = true;
-			
 			break;
 			case main_character.Player_PowerUps.time_warp:
 			Engine.TimeScale = 0.7;
