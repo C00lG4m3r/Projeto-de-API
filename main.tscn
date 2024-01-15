@@ -5092,4 +5092,4 @@ position = Vector2(-2958, 153)
 position = Vector2(-3295, 234)
 
 [node name="Power Up Interactable" parent="." instance=ExtResource("24_urp34")]
-position = Vector2(-157, 636)
+position = Vector2(-5, 764)
