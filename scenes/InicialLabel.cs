@@ -16,7 +16,7 @@ public partial class InicialLabel : Label
 	}
 	public override void _PhysicsProcess(double delta)
 	{
-		if (Position.DistanceTo(player_node.Position) < 350)
+		if (Position.DistanceTo(player_node.Position) !> 350)
 		{
 			start_dialogue();
 		}

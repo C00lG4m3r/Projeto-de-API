@@ -5074,7 +5074,7 @@ visible = false
 polygon = PackedVector2Array(-1862, -6461, 4469, -6461, 4475, -11962, -1841, -11955)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_e1wr0")]
-position = Vector2(1663, -11418)
+position = Vector2(596, -11197)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = -1820
@@ -5099,4 +5099,5 @@ position = Vector2(-3295, 234)
 position = Vector2(-5, 764)
 
 [node name="Babe" parent="." instance=ExtResource("25_4ysas")]
-position = Vector2(1709, -11426)
+position = Vector2(1699, -11388)
+collision_layer = 2

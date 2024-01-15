@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://colhmfbr8mxn3"]
+[gd_scene load_steps=8 format=3 uid="uid://colhmfbr8mxn3"]
 
 [ext_resource type="Script" path="res://scenes/Win/babe.cs" id="1_15510"]
 [ext_resource type="Texture2D" uid="uid://dbfsffffagm4w" path="res://Background/Other/Walk.png" id="2_l8w7t"]
@@ -22,35 +22,50 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnlxb"]
 radius = 73.0274
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adkiu"]
+size = Vector2(1, 1)
+
 [node name="Babe" type="CharacterBody2D"]
 scale = Vector2(0.4, 0.4)
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_15510")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(86, 88.5)
 scale = Vector2(11.75, 12.0625)
 sprite_frames = SubResource("SpriteFrames_yxxif")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(87.0001, 106)
 shape = SubResource("CircleShape2D_nnlxb")
 
 [node name="Kiss Area" type="Area2D" parent="."]
+position = Vector2(-45, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kiss Area"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_adkiu")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 32.0
-offset_top = -37.0
-offset_right = 269.0
-offset_bottom = 26.0
+offset_left = -272.0
+offset_top = -230.0
+offset_right = 278.0
+offset_bottom = -74.0
 theme_override_fonts/font = ExtResource("3_wcj6g")
 theme_override_font_sizes/font_size = 19
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="next_char" type="Timer" parent="Label"]
 wait_time = 0.1
 
 [node name="Win" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="WalkTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="timeout" from="Label/next_char" to="." method="OnNextCharTimeout"]
+[connection signal="timeout" from="Win" to="." method="OnWinTimeout"]
+[connection signal="timeout" from="WalkTimer" to="." method="OnWalkTimerTimeout"]
