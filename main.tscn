@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=39 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://b2nt817o4dyc6" path="res://Background/Cave/01 bg.png" id="1_6ytqb"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_cmnow"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://kniswgl1b0fn" path="res://Power Ups/Interactable/power_up_interactable.tscn" id="24_urp34"]
 [ext_resource type="PackedScene" uid="uid://colhmfbr8mxn3" path="res://scenes/Win/babe.tscn" id="25_4ysas"]
 [ext_resource type="PackedScene" uid="uid://cartfp26mx78h" path="res://scenes/InicialLabel.tscn" id="26_5ojfx"]
+[ext_resource type="PackedScene" uid="uid://2r1han0exvrq" path="res://scenes/Win/win.tscn" id="26_dloge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -5100,4 +5101,6 @@ position = Vector2(-5, 764)
 
 [node name="Babe" parent="." instance=ExtResource("25_4ysas")]
 position = Vector2(1699, -11388)
-collision_layer = 2
+
+[node name="Win" parent="." instance=ExtResource("26_dloge")]
+position = Vector2(632, -11517)

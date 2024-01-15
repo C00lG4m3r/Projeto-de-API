@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://2r1han0exvrq"]
+
+[ext_resource type="Script" path="res://scenes/Win/win.cs" id="1_uc0td"]
+
+[node name="Win" type="Node2D"]
+script = ExtResource("1_uc0td")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+visible = false
+offset_left = 602.0
+offset_top = 204.0
+offset_right = 1041.0
+offset_bottom = 279.0
+text = "YOU WON!"
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 10.0
+
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="OnTimerTimeout"]

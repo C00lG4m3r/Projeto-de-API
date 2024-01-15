@@ -13,6 +13,8 @@ public partial class babe : CharacterBody2D
 	public int current_char = 0;
 	public string display = "";
 	public bool IsWalking;
+	public bool IsAudioPlayed = false;
+	public bool YouWon;
 	public override void _Ready()
 	{
 		player_node = GetNode<main_character>("../CharacterBody2D");
@@ -42,7 +44,11 @@ public partial class babe : CharacterBody2D
 			{
 				GetNode<Timer>("./Win").Start();
 				velocity = Vector2.Zero;
-				GetNode<AudioStreamPlayer2D>("./Kiss").Play();
+				if (!IsAudioPlayed)
+				{
+					GetNode<AudioStreamPlayer2D>("./Kiss").Play();
+					IsAudioPlayed = true;
+				}
 				
 			}
 		}
@@ -69,6 +75,6 @@ public partial class babe : CharacterBody2D
 	}
 	public void OnWinTimeout()
 	{
-
+		YouWon = true;
 	}
 }
