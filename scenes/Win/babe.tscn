@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://colhmfbr8mxn3"]
+[gd_scene load_steps=7 format=3 uid="uid://colhmfbr8mxn3"]
 
 [ext_resource type="Script" path="res://scenes/Win/babe.cs" id="1_15510"]
 [ext_resource type="Texture2D" uid="uid://dbfsffffagm4w" path="res://Background/Other/Walk.png" id="2_l8w7t"]
@@ -22,10 +22,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnlxb"]
 radius = 73.0274
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_k5x3r"]
-radius = 72.0625
-
 [node name="Babe" type="CharacterBody2D"]
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_15510")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -36,7 +34,6 @@ sprite_frames = SubResource("SpriteFrames_yxxif")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(87.0001, 106)
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_nnlxb")
 
 [node name="Kiss Area" type="Area2D" parent="."]
