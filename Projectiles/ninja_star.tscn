@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Projectiles/ninja_star.cs" id="1_2012c"]
 [ext_resource type="Texture2D" uid="uid://dbdhoy73fmuov" path="res://Projectiles/Shuriken.png" id="2_l065b"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3j3b"]
-size = Vector2(14.5, 14.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_pky72"]
+radius = 6.25056
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lggtc"]
 atlas = ExtResource("2_l065b")
@@ -29,12 +29,12 @@ animations = [{
 }]
 
 [node name="Ninja Star" type="Area2D"]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 script = ExtResource("1_2012c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, 1.25)
-shape = SubResource("RectangleShape2D_n3j3b")
+position = Vector2(0.75, 1.25)
+shape = SubResource("CircleShape2D_pky72")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
