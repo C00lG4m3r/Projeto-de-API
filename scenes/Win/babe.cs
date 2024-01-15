@@ -42,6 +42,8 @@ public partial class babe : CharacterBody2D
 			{
 				GetNode<Timer>("./Win").Start();
 				velocity = Vector2.Zero;
+				GetNode<AudioStreamPlayer2D>("./Kiss").Play();
+				
 			}
 		}
 		Velocity = velocity;
