@@ -182,6 +182,7 @@ animations = [{
 size = Vector2(8, 11)
 
 [node name="BigPowerup" type="Area2D"]
+scale = Vector2(5, 5)
 script = ExtResource("1_lo4gr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
