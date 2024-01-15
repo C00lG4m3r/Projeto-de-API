@@ -44,6 +44,7 @@ public partial class main_character : CharacterBody2D
 		if(health==2) 
 		{
 			current_powerup = main_character.Player_PowerUps.big_powerup;
+			time_warp=false;
 		} else if (health == 1)
 		{
 			current_powerup = main_character.Player_PowerUps.none;
@@ -136,6 +137,15 @@ public partial class main_character : CharacterBody2D
 			Sprite2D.FlipH = isLeft;
 		}
 
+		//Time Warp
+		if (time_warp)
+		{
+			Engine.TimeScale = 0.7;
+		} else 
+		{
+			Engine.TimeScale = 1;
+		}
+
 
 		//Power Ups
 		switch (current_powerup)
@@ -150,19 +160,14 @@ public partial class main_character : CharacterBody2D
 				star.direction = this.Position.DirectionTo(mouse_pos);
 				star.bullet_speed = 10;
 			}
+			time_warp=false;
 			break;
 			case main_character.Player_PowerUps.flash:
 			Speed = 470f;
+			time_warp=false;
 			break;
 			case main_character.Player_PowerUps.time_warp:
 			time_warp=true;
-			if (time_warp)
-			{
-				Engine.TimeScale = 0.7;
-			} else 
-			{
-				Engine.TimeScale = 1;
-			}
 			break;
 		}
 	}
