@@ -179,20 +179,20 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhdbf"]
-radius = 46.0
+radius = 18.0278
 
 [node name="Time Warp" type="Area2D"]
 script = ExtResource("1_sof5u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(111.5, 87)
-scale = Vector2(7.96875, 6.4375)
+position = Vector2(42.5, 31.5)
+scale = Vector2(3.65625, 2.96875)
 sprite_frames = SubResource("SpriteFrames_6xt3q")
 animation = &"Cherries"
 autoplay = "Cherries"
 frame_progress = 0.607758
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(110, 95)
+position = Vector2(41, 35)
 shape = SubResource("CircleShape2D_yhdbf")

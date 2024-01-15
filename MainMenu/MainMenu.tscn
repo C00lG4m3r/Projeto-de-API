@@ -824,9 +824,8 @@ text = "Preparado para as aventuras que te esperam!?
 Podes te mover com as setas ou então com o wasd. E utiliza o espaço para saltar!
 O objetivo é chegares até ao topo, mas cuidado que é muito fácil caires! Ah e cuidado com os inimigos, eles não te vão ajudar muito a concluires a tua missão.
 Mas não te preocupes que ao longo do mapa podes encontrar algumas caixas que deitam frutas mágicas que te vão dar poderes!
-Maça -                                                      Banana -                                          Cereja -                                                 
-Kiwi -                                                       Ananás -                                          Morango -
-"
+                                           Banana - Recebes uma arma para matar os inimigos                      Cereja - Faz com que o tempo passe mais lentamente                                                
+Kiwi - Aumenta-te a velocidade                                                              Ananás - Dá te mais uma vida"
 horizontal_alignment = 1
 vertical_alignment = 1
 
