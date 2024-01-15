@@ -45,6 +45,7 @@ animations = [{
 size = Vector2(163, 154.5)
 
 [node name="Power Up Interactable" type="Area2D"]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_ujdwr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -59,9 +60,10 @@ position = Vector2(217.5, 134.75)
 shape = SubResource("RectangleShape2D_g6r1v")
 
 [node name="Press E" type="Label" parent="."]
-offset_left = 167.0
-offset_top = 21.0
-offset_right = 258.0
-offset_bottom = 47.0
+offset_left = 133.333
+offset_top = -10.0
+offset_right = 304.333
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 50
 text = "Press E"
 horizontal_alignment = 1
