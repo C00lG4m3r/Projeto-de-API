@@ -42,12 +42,12 @@ public partial class power_up_interactable : Area2D
 					break;
 					case main_character.Player_PowerUps.flash:
 						var flash_powerup_instance = flash_powerup_scene.Instantiate<flash>();
-						flash_powerup_instance.Position = this.Position + new Vector2(0, -80);
+						flash_powerup_instance.Position = this.Position + new Vector2(0, -60);
 						AddSibling(flash_powerup_instance);
 					break;
 					case main_character.Player_PowerUps.time_warp:
 						var time_warp_powerup_instance = time_warp_powerup_scene.Instantiate<time_warp>();
-						time_warp_powerup_instance.Position = this.Position + new Vector2(0, -80);
+						time_warp_powerup_instance.Position = this.Position + new Vector2(0, -60);
 						AddSibling(time_warp_powerup_instance);
 					break;
 					case main_character.Player_PowerUps.none:

@@ -19,12 +19,12 @@
 [ext_resource type="Script" path="res://scenes/Temple.cs" id="14_74h6j"]
 [ext_resource type="Script" path="res://scenes/Sky.cs" id="14_yyjx7"]
 [ext_resource type="PackedScene" uid="uid://bgcv6mhvvbqxf" path="res://HUD/hud.tscn" id="15_ylq0i"]
-[ext_resource type="PackedScene" uid="uid://dhkqeesx7qfv6" path="res://Power Ups/Ninja/ninja.tscn" id="16_6fnj5"]
 [ext_resource type="Script" path="res://scenes/Space.cs" id="17_5e35j"]
 [ext_resource type="Script" path="res://scenes/Spikes.cs" id="18_y6t7o"]
 [ext_resource type="PackedScene" uid="uid://burwbqcmdfqve" path="res://DeathScreen/death_screen.tscn" id="19_urfkq"]
 [ext_resource type="PackedScene" uid="uid://kniswgl1b0fn" path="res://Power Ups/Interactable/power_up_interactable.tscn" id="24_urp34"]
 [ext_resource type="PackedScene" uid="uid://bm77mr7pie66a" path="res://Power Ups/Flash/flash.tscn" id="25_226a1"]
+[ext_resource type="PackedScene" uid="uid://cartfp26mx78h" path="res://scenes/InicialLabel.tscn" id="26_5ojfx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -5068,7 +5068,7 @@ visible = false
 polygon = PackedVector2Array(-1862, -6461, 4469, -6461, 4475, -11962, -1841, -11955)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_e1wr0")]
-position = Vector2(131, 785)
+position = Vector2(-1769, 579)
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 limit_left = -1820
@@ -5076,9 +5076,6 @@ limit_top = -11858
 limit_right = 4448
 limit_bottom = 2658
 limit_smoothed = true
-
-[node name="ninja" parent="." instance=ExtResource("16_6fnj5")]
-position = Vector2(-1076, 526)
 
 [node name="Spikes" type="Area2D" parent="."]
 script = ExtResource("18_y6t7o")
@@ -5097,3 +5094,9 @@ position = Vector2(-5, 764)
 
 [node name="Flash" parent="." instance=ExtResource("25_226a1")]
 position = Vector2(405, 773)
+
+[node name="InicialLabel" parent="." instance=ExtResource("26_5ojfx")]
+offset_left = -1128.0
+offset_top = 437.0
+offset_right = -959.0
+offset_bottom = 513.0

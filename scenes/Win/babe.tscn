@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://colhmfbr8mxn3"]
+
+[ext_resource type="Script" path="res://scenes/Win/babe.cs" id="1_15510"]
+
+[node name="Babe" type="CharacterBody2D"]
+script = ExtResource("1_15510")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
