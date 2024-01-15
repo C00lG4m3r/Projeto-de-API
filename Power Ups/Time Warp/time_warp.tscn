@@ -186,7 +186,7 @@ script = ExtResource("1_sof5u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(42.5, 31.5)
+position = Vector2(0, 1.90735e-06)
 scale = Vector2(3.65625, 2.96875)
 sprite_frames = SubResource("SpriteFrames_6xt3q")
 animation = &"Cherries"
@@ -194,5 +194,7 @@ autoplay = "Cherries"
 frame_progress = 0.607758
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(41, 35)
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_yhdbf")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

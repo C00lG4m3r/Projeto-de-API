@@ -43,16 +43,11 @@ public partial class main_character : CharacterBody2D
 		//Health stages, scale.
 		if(health==2) 
 		{
-			this.Scale = new Vector2(1,1.4f);
 			current_powerup = main_character.Player_PowerUps.big_powerup;
 		} else if (health == 1)
 		{
-			this.Scale = new Vector2(1,1);
 			current_powerup = main_character.Player_PowerUps.none;
-		} else
-		{
-			this.Scale = new Vector2(1,1);
-		}
+		} 
 
 		if (health >= 2)
 		{

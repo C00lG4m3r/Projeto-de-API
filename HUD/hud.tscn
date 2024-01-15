@@ -206,6 +206,13 @@ offset_right = 1104.0
 offset_bottom = 675.0
 text = "Exit Game"
 
+[node name="Current PowerUp" type="Label" parent="CanvasLayer"]
+offset_left = 1718.0
+offset_top = 78.0
+offset_right = 1917.0
+offset_bottom = 116.0
+horizontal_alignment = 1
+
 [connection signal="pressed" from="CanvasLayer/Pause" to="." method="OnPausePressed"]
 [connection signal="pressed" from="CanvasLayer/Resume" to="." method="OnResumePressed"]
 [connection signal="pressed" from="CanvasLayer/Main Menu" to="." method="OnMainMenuPressed"]

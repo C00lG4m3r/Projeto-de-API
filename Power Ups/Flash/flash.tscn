@@ -187,7 +187,7 @@ script = ExtResource("1_xd375")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(178, 148)
+position = Vector2(-2, 4)
 scale = Vector2(6.65625, 5.84375)
 sprite_frames = SubResource("SpriteFrames_qo6np")
 animation = &"Kiwi"
@@ -195,5 +195,7 @@ autoplay = "Kiwi"
 frame_progress = 0.398938
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(181, 150)
+position = Vector2(-2, 2)
 shape = SubResource("CircleShape2D_sti53")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
