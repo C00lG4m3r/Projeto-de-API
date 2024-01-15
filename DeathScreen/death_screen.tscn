@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://burwbqcmdfqve"]
+[gd_scene load_steps=9 format=3 uid="uid://burwbqcmdfqve"]
 
 [ext_resource type="Script" path="res://DeathScreen/death_screen.cs" id="1_bt4vb"]
 [ext_resource type="Texture2D" uid="uid://h7jggy4ca1or" path="res://Background/Blocks/Underwaterlands_Tile_Set.png" id="2_wmb30"]
 [ext_resource type="Texture2D" uid="uid://vpkotbfe0van" path="res://Background/Blocks/Cloud Tileset.png" id="3_w53lp"]
 [ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="4_p4nxf"]
+[ext_resource type="FontFile" uid="uid://c47fxe0c4hvtl" path="res://Fonts/NormalFont.ttf" id="5_4vo58"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lfct"]
 texture = ExtResource("2_wmb30")
@@ -688,6 +689,7 @@ offset_left = 794.0
 offset_top = 390.0
 offset_right = 1190.0
 offset_bottom = 477.0
+theme_override_fonts/font = ExtResource("5_4vo58")
 theme_override_font_sizes/font_size = 50
 text = "Restart
 "
@@ -698,8 +700,9 @@ offset_left = 795.0
 offset_top = 515.0
 offset_right = 1190.0
 offset_bottom = 599.0
+theme_override_fonts/font = ExtResource("5_4vo58")
 theme_override_font_sizes/font_size = 50
-text = "Main Menu"
+text = "Main    Menu"
 
 [node name="Quit" type="Button" parent="CanvasLayer"]
 visible = false
@@ -707,6 +710,7 @@ offset_left = 795.0
 offset_top = 637.0
 offset_right = 1190.0
 offset_bottom = 723.0
+theme_override_fonts/font = ExtResource("5_4vo58")
 theme_override_font_sizes/font_size = 50
 text = "Quit
 "
@@ -717,8 +721,9 @@ offset_left = 638.0
 offset_top = 209.0
 offset_right = 1353.0
 offset_bottom = 354.0
+theme_override_fonts/font = ExtResource("5_4vo58")
 theme_override_font_sizes/font_size = 100
-text = "YOU DIED!"
+text = "YOU    DIED!"
 alignment = 1
 editable = false
 flat = true
