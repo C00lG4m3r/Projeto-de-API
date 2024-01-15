@@ -105,24 +105,32 @@ public partial class main_character : CharacterBody2D
 		// Handle Jump.
 		if (Input.IsActionJustPressed("Jump") && (IsOnFloor() || IsSwimming))
 		{
-			velocity.Y = JumpVelocity;
+			if (IsWinning)
+			{}else 
+			{
+				velocity.Y = JumpVelocity;
+			}
 		}
 
 
 		// Directions and speed.
 		Vector2 direction = Input.GetVector("Left", "Right", "ui_up", "ui_down");
-		direction = direction.Normalized();
-		if (direction.X > 0)
+		if(IsWinning)
+		{} else
 		{
-			velocity.X = Speed;
-		}
-		else if (direction.X < 0)
-		{
-			velocity.X = -Speed;
-		}
-		else
-		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, 400);
+			direction = direction.Normalized();
+			if (direction.X > 0)
+			{
+				velocity.X = Speed;
+			}
+			else if (direction.X < 0)
+			{
+				velocity.X = -Speed;
+			}
+			else
+			{
+				velocity.X = Mathf.MoveToward(Velocity.X, 0, 400);
+			}	
 		}
 		velocity += knockbackvelocity;
 
@@ -153,13 +161,16 @@ public partial class main_character : CharacterBody2D
 		{
 			case main_character.Player_PowerUps.ninja:
 			if (Input.IsActionJustPressed("Power"))
+			{if (IsWinning)
+			{}else
 			{
 				mouse_pos = GetGlobalMousePosition();
 				ninja_star star = ninja_star_scene.Instantiate<ninja_star>();
 				AddSibling(star);
 				star.Position = this.Position + this.Position.DirectionTo(mouse_pos) * 40;
 				star.direction = this.Position.DirectionTo(mouse_pos);
-				star.bullet_speed = 10;
+				star.bullet_speed = 10;		
+			} 
 			}
 			time_warp=false;
 			break;

@@ -35,7 +35,6 @@ public partial class water_enemy : CharacterBody2D
 				elapsed_time = 0;
 			}
 		}
-
 		Velocity = velocity;
 		MoveAndSlide();
 	}

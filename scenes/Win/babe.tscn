@@ -39,10 +39,6 @@ position = Vector2(87.0001, 106)
 scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_nnlxb")
 
-[node name="Interact area" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact area"]
-
 [node name="Kiss Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kiss Area"]
@@ -58,6 +54,6 @@ theme_override_font_sizes/font_size = 19
 [node name="next_char" type="Timer" parent="Label"]
 wait_time = 0.1
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Win" type="Timer" parent="."]
 
 [connection signal="timeout" from="Label/next_char" to="." method="OnNextCharTimeout"]
