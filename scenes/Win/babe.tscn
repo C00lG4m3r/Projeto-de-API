@@ -9,9 +9,13 @@ script = ExtResource("1_15510")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Interact area" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact area"]
+
+[node name="Kiss Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kiss Area"]
 
 [node name="Label" type="Label" parent="."]
 offset_left = -21.0
@@ -21,5 +25,7 @@ offset_bottom = -34.0
 
 [node name="next_char" type="Timer" parent="Label"]
 wait_time = 0.1
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="timeout" from="Label/next_char" to="." method="OnNextCharTimeout"]

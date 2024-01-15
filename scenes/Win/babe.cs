@@ -3,8 +3,9 @@ using System;
 
 public partial class babe : CharacterBody2D
 {
+	public float Speed = 3f;
 	public main_character player_node;
-	public string message = "There's A Smoking Hot Babe At The Top!";
+	public string message = "You Finally Found Me!!!";
 	public double typing_speed = 0.1;
 	public int current_char = 0;
 	public string display = "";
@@ -14,20 +15,13 @@ public partial class babe : CharacterBody2D
 	}
 	public override void _PhysicsProcess(double delta)
 	{
-		if (Position.DistanceTo(player_node.Position) < 500)
+		if (Position.DistanceTo(player_node.Position) < 800)
 		{
 			start_dialogue();
 		}
-		var overlapping_areas = GetNode<Area2D>("Area2D").GetOverlappingAreas();
-		foreach (Area2D area in overlapping_areas)
+		if (player_node.Position.Y < -11345 && player_node.Position.X > 1170)
 		{
-			var player = area.GetParent() as main_character;
-			if (player != null) 
-			{
-				if (Input.IsActionJustPressed("Interact"))
-				{
-				}
-			}
+			
 		}
 		MoveAndSlide();
 	}
