@@ -52,7 +52,6 @@ texture_filter = 1
 position = Vector2(219, 136)
 scale = Vector2(8.07143, 7.58333)
 sprite_frames = SubResource("SpriteFrames_li6nj")
-animation = &"hit"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
