@@ -12,3 +12,14 @@ script = ExtResource("1_15510")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -57.0
+offset_right = 19.0
+offset_bottom = -34.0
+
+[node name="next_char" type="Timer" parent="Label"]
+wait_time = 0.1
+
+[connection signal="timeout" from="Label/next_char" to="." method="OnNextCharTimeout"]
