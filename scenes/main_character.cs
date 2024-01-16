@@ -23,7 +23,7 @@ public partial class main_character : CharacterBody2D
 	public bool IsLowGravity;
 	public bool IsSuperLowGravity;
 	public bool IsWinning;
-	private AnimatedSprite2D Sprite2D;
+	public AnimatedSprite2D Sprite2D;
 	public int health = 1;
 	public int bubblehealth;
 	public bool time_warp;
@@ -32,7 +32,7 @@ public partial class main_character : CharacterBody2D
 	public override void _Ready()
 	{
 		Sprite2D = GetNode<AnimatedSprite2D>("Sprite2D");
-		GD.Print(Sprite2D);
+		GD.Print(Sprite2D);	
 	}
 
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();

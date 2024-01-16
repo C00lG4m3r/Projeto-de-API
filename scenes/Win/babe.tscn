@@ -61,15 +61,7 @@ autowrap_mode = 2
 [node name="next_char" type="Timer" parent="Label"]
 wait_time = 0.1
 
-[node name="Win" type="Timer" parent="."]
-wait_time = 60.0
-
-[node name="WalkTimer" type="Timer" parent="."]
-wait_time = 3.0
-
 [node name="Kiss" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_4stpq")
 
 [connection signal="timeout" from="Label/next_char" to="." method="OnNextCharTimeout"]
-[connection signal="timeout" from="Win" to="." method="OnWinTimeout"]
-[connection signal="timeout" from="WalkTimer" to="." method="OnWalkTimerTimeout"]

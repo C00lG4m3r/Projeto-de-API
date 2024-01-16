@@ -1,11 +1,11 @@
-[gd_scene load_steps=39 format=3 uid="uid://cq5hmy10ocr03"]
+[gd_scene load_steps=37 format=3 uid="uid://cq5hmy10ocr03"]
 
 [ext_resource type="Script" path="res://scenes/main_character.cs" id="1_raucx"]
 [ext_resource type="Texture2D" uid="uid://d1d70ml5v3mmt" path="res://scenes/Idle (32x32).png" id="2_prhl5"]
 [ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="3_kik4e"]
 [ext_resource type="Texture2D" uid="uid://dd1ve1yl1d5gn" path="res://scenes/Run (32x32).png" id="4_3i0ip"]
-[ext_resource type="Texture2D" uid="uid://dkgfkknlk2pd5" path="res://Background/Other/Imagem3.png" id="5_am8nk"]
-[ext_resource type="Texture2D" uid="uid://dj5ek7wng04bj" path="res://Background/Other/SpriteSheet.png" id="5_vh5nd"]
+[ext_resource type="Texture2D" uid="uid://chjly5blqe8q8" path="res://Background/Other/Walk1.png" id="4_17if6"]
+[ext_resource type="Texture2D" uid="uid://dkgfkknlk2pd5" path="res://Background/Other/Imagem3.png" id="5_tccqq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_obsov"]
 atlas = ExtResource("2_prhl5")
@@ -50,6 +50,10 @@ region = Rect2(288, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_epjcg"]
 atlas = ExtResource("2_prhl5")
 region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nfo5"]
+atlas = ExtResource("4_17if6")
+region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ronb"]
 atlas = ExtResource("4_3i0ip")
@@ -99,29 +103,17 @@ region = Rect2(320, 0, 32, 32)
 atlas = ExtResource("4_3i0ip")
 region = Rect2(352, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_onr8i"]
-atlas = ExtResource("5_am8nk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbtot"]
+atlas = ExtResource("5_tccqq")
 region = Rect2(0, 0, 96, 110)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dtfny"]
-atlas = ExtResource("5_am8nk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_531ac"]
+atlas = ExtResource("5_tccqq")
 region = Rect2(96, 0, 96, 110)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k3cy6"]
-atlas = ExtResource("5_am8nk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7jwv"]
+atlas = ExtResource("5_tccqq")
 region = Rect2(192, 0, 96, 110)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eu2px"]
-atlas = ExtResource("5_vh5nd")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bsp4h"]
-atlas = ExtResource("5_vh5nd")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1owtx"]
-atlas = ExtResource("5_vh5nd")
-region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fk7s7"]
 animations = [{
@@ -173,6 +165,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_2nfo5")
+}],
+"loop": true,
+"name": &"prince",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_3ronb")
 }, {
 "duration": 1.0,
@@ -214,29 +214,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_obsov")
+"texture": SubResource("AtlasTexture_pbtot")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_onr8i")
+"texture": SubResource("AtlasTexture_531ac")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dtfny")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k3cy6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eu2px")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bsp4h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1owtx")
+"texture": SubResource("AtlasTexture_o7jwv")
 }],
 "loop": true,
 "name": &"smoke",
-"speed": 7.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gfegu"]
@@ -251,15 +239,11 @@ script = ExtResource("1_raucx")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1, 23)
-scale = Vector2(2.85938, 2.65625)
+scale = Vector2(2.859, 2.656)
 sprite_frames = SubResource("SpriteFrames_fk7s7")
-animation = &"smoke"
 autoplay = "default"
-frame = 3
-frame_progress = 0.972678
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(1.25004, 33.5)
 scale = Vector2(3.59375, 3.5)
 shape = SubResource("RectangleShape2D_gfegu")
@@ -268,6 +252,5 @@ shape = SubResource("RectangleShape2D_gfegu")
 position = Vector2(1, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
 position = Vector2(0, 31.5)
 shape = SubResource("RectangleShape2D_vyley")

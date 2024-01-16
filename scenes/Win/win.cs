@@ -3,6 +3,7 @@ using System;
 
 public partial class win : Node2D
 {
+	public double elapsed_time;
 	public babe win_node;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -16,11 +17,11 @@ public partial class win : Node2D
 		if (win_node.YouWon) 
 		{
 			GetNode<Godot.LineEdit>("CanvasLayer/LineEdit").Visible = true;
-			GetNode<Timer>("./Timer").Start();
+			elapsed_time += delta;
+			if (elapsed_time > 10)
+			{
+				GetTree().Quit();
+			}
 		}
-	}
-	private void OnTimerTimeout()
-	{
-	GetTree().Quit();
 	}
 }
