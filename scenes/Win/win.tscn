@@ -410,18 +410,6 @@ script = ExtResource("1_uc0td")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
-visible = false
-offset_left = 322.0
-offset_top = 201.0
-offset_right = 1535.0
-offset_bottom = 344.0
-theme_override_fonts/font = ExtResource("2_18nou")
-theme_override_font_sizes/font_size = 100
-text = "YOU     WON!"
-alignment = 1
-flat = true
-
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 10.0
 
@@ -455,5 +443,17 @@ rotation = -3.14159
 scale = Vector2(4.13789, -3.90287)
 sprite_frames = SubResource("SpriteFrames_yaia2")
 frame_progress = 0.701255
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+visible = false
+offset_left = 322.0
+offset_top = 201.0
+offset_right = 1535.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("2_18nou")
+theme_override_font_sizes/font_size = 100
+text = "YOU     WON!"
+alignment = 1
+flat = true
 
 [connection signal="timeout" from="CanvasLayer/Timer" to="." method="OnTimerTimeout"]
