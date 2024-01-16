@@ -15,6 +15,8 @@ public partial class babe : CharacterBody2D
 	public bool IsAudioPlayed = false;
 	public bool YouWon;
 	public double elapsed_time;
+	public double smoke_time;
+	public bool prince;
 	public override void _Ready()
 	{
 		player_node = GetNode<main_character>("../CharacterBody2D");
@@ -48,7 +50,19 @@ public partial class babe : CharacterBody2D
 					GetNode<AudioStreamPlayer2D>("./Kiss").Play();
 					IsAudioPlayed = true;
 				}
-				player_node.Sprite2D.Animation = "prince";
+				player_node.GetNode<AnimatedSprite2D>("./Sprite2D").Visible = false;
+				player_node.GetNode<AnimatedSprite2D>("./Smoke").Visible = true;
+				player_node.GetNode<AnimatedSprite2D>("./Smoke").Play();
+				smoke_time += delta;
+				if (smoke_time > 1.48)
+				{
+					prince = true;
+				}
+				if (prince)
+				{
+				player_node.GetNode<AnimatedSprite2D>("./Smoke").Visible = false;
+				player_node.GetNode<AnimatedSprite2D>("./Prince").Visible = true;
+				}
 			}
 		}
 		Velocity = velocity;

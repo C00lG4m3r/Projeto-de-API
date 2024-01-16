@@ -14,7 +14,7 @@ public partial class water_enemy : CharacterBody2D
 	public override void _Ready()
 	{
 		this.player_node = GetNode<main_character>("../CharacterBody2D");
-		Sprite2D = GetNode<AnimatedSprite2D>("Sprite2D");
+		Sprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		GD.Print(Sprite2D);	
 	}
 
@@ -27,6 +27,11 @@ public partial class water_enemy : CharacterBody2D
 		{
 			var direction = this.Position.DirectionTo(player_node.Position);
 			velocity = direction * Speed;
+			if (direction.X != 0) 
+			{
+				bool isLeft = velocity.X < 0;
+				Sprite2D.FlipH = isLeft;
+			}
 		}
 		var overlapping_areas = GetNode<Area2D>("./Area2D").GetOverlappingAreas();
 		foreach (Area2D area in overlapping_areas)

@@ -25,7 +25,6 @@ public partial class win : Node2D
 			GetNode<Godot.TileMap>("CanvasLayer/TileMap").Visible = true;
 			GetNode<Godot.AnimatedSprite2D>("CanvasLayer/AnimatedSprite2D").Visible = true;
 			GetNode<Godot.AnimatedSprite2D>("CanvasLayer/AnimatedSprite2D2").Visible = true;
-			GetNode<Timer>("./Timer").Start();
 		}
 	}
 }
