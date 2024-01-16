@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=42 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://b2nt817o4dyc6" path="res://Background/Cave/01 bg.png" id="1_6ytqb"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_cmnow"]
@@ -26,6 +26,9 @@
 [ext_resource type="PackedScene" uid="uid://colhmfbr8mxn3" path="res://scenes/Win/babe.tscn" id="25_4ysas"]
 [ext_resource type="PackedScene" uid="uid://cartfp26mx78h" path="res://scenes/InicialLabel.tscn" id="26_5ojfx"]
 [ext_resource type="PackedScene" uid="uid://2r1han0exvrq" path="res://scenes/Win/win.tscn" id="26_dloge"]
+[ext_resource type="PackedScene" uid="uid://c6hyvpqhhukmc" path="res://Ops/water_enemy.tscn" id="27_h58st"]
+[ext_resource type="PackedScene" uid="uid://dm5g5j3n4m82v" path="res://Ops/temple_enemy.tscn" id="28_q45s3"]
+[ext_resource type="PackedScene" uid="uid://5xedbb14q36u" path="res://Ops/desert_enemy.tscn" id="29_cd275"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -5075,7 +5078,7 @@ visible = false
 polygon = PackedVector2Array(-1862, -6461, 4469, -6461, 4475, -11962, -1841, -11955)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_e1wr0")]
-position = Vector2(596, -11197)
+position = Vector2(-1766, 576)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = -1820
@@ -5090,6 +5093,12 @@ script = ExtResource("18_y6t7o")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spikes"]
 polygon = PackedVector2Array(1097, 316, 1094, 550, 1145, 598, 1381, 601, 1432, 548, 1433, 308, 1379, 257, 1152, 259)
 
+[node name="Spike" type="Area2D" parent="."]
+script = ExtResource("18_y6t7o")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spike"]
+polygon = PackedVector2Array(663, 478, 665, 459, 706, 458, 712, 458, 713, 485)
+
 [node name="HUD" parent="." instance=ExtResource("15_ylq0i")]
 position = Vector2(-2958, 153)
 
@@ -5097,10 +5106,35 @@ position = Vector2(-2958, 153)
 position = Vector2(-3295, 234)
 
 [node name="Power Up Interactable" parent="." instance=ExtResource("24_urp34")]
-position = Vector2(-5, 764)
+position = Vector2(2385, 2580)
 
 [node name="Babe" parent="." instance=ExtResource("25_4ysas")]
 position = Vector2(1699, -11388)
 
 [node name="Win" parent="." instance=ExtResource("26_dloge")]
 position = Vector2(632, -11517)
+
+[node name="Water Enemy" parent="." instance=ExtResource("27_h58st")]
+position = Vector2(-277, 2238)
+
+[node name="Water Enemy2" parent="." instance=ExtResource("27_h58st")]
+position = Vector2(2412, 2185)
+
+[node name="Temple Enemy" parent="." instance=ExtResource("28_q45s3")]
+position = Vector2(1521, 106)
+rotation = 3.14159
+
+[node name="Power Up Interactable2" parent="." instance=ExtResource("24_urp34")]
+position = Vector2(2880, 577)
+
+[node name="Desert Enemy" parent="." instance=ExtResource("29_cd275")]
+position = Vector2(4015, -1871)
+
+[node name="Power Up Interactable3" parent="." instance=ExtResource("24_urp34")]
+position = Vector2(3668, -813)
+
+[node name="Power Up Interactable4" parent="." instance=ExtResource("24_urp34")]
+position = Vector2(-1628, -4703)
+
+[node name="Power Up Interactable5" parent="." instance=ExtResource("24_urp34")]
+position = Vector2(-1862, -3019)

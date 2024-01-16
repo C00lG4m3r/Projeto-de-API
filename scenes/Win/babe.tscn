@@ -44,6 +44,7 @@ shape = SubResource("CircleShape2D_nnlxb")
 position = Vector2(-45, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kiss Area"]
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_adkiu")
 
 [node name="Label" type="Label" parent="."]

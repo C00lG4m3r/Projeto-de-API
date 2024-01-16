@@ -4,6 +4,7 @@ using System;
 public partial class water_enemy : CharacterBody2D
 {
 	public main_character player_node;
+	public AnimatedSprite2D Sprite2D;
 	public float Speed = 300.0f;
 	public double elapsed_time;
 	
@@ -13,6 +14,8 @@ public partial class water_enemy : CharacterBody2D
 	public override void _Ready()
 	{
 		this.player_node = GetNode<main_character>("../CharacterBody2D");
+		Sprite2D = GetNode<AnimatedSprite2D>("Sprite2D");
+		GD.Print(Sprite2D);	
 	}
 
 	public override void _PhysicsProcess(double delta)
