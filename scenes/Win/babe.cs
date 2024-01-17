@@ -28,7 +28,7 @@ public partial class babe : CharacterBody2D
 		{
 			start_dialogue();
 		}
-		if (player_node.Position.Y < -11345 && player_node.Position.X > 1170)
+		if (player_node.Position.Y < -11345 && player_node.Position.X > 1170 && player_node.Position.X < 1830)
 		{
 			player_node.IsWinning = true;
 			player_node.Velocity = Vector2.Zero;
@@ -54,7 +54,7 @@ public partial class babe : CharacterBody2D
 				player_node.GetNode<AnimatedSprite2D>("./Smoke").Visible = true;
 				player_node.GetNode<AnimatedSprite2D>("./Smoke").Play();
 				smoke_time += delta;
-				if (smoke_time > 1.48)
+				if (smoke_time > 1)
 				{
 					prince = true;
 				}

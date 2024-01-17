@@ -7,8 +7,8 @@ public partial class big_powerup : power_up
 	{
 		if (player_node.health < 2)
 		{
-		player_node.current_powerup = main_character.Player_PowerUps.big_powerup;
-		player_node.health = 2;
+			player_node.current_powerup = main_character.Player_PowerUps.big_powerup;
+			player_node.health = 2;
 		}
 	}
 }

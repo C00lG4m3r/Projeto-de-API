@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cq5hmy10ocr03"]
+[gd_scene load_steps=42 format=3 uid="uid://cq5hmy10ocr03"]
 
 [ext_resource type="Script" path="res://scenes/main_character.cs" id="1_raucx"]
 [ext_resource type="Texture2D" uid="uid://d1d70ml5v3mmt" path="res://scenes/Idle (32x32).png" id="2_prhl5"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dd1ve1yl1d5gn" path="res://scenes/Run (32x32).png" id="4_3i0ip"]
 [ext_resource type="Texture2D" uid="uid://chjly5blqe8q8" path="res://Background/Other/Walk1.png" id="4_17if6"]
 [ext_resource type="Texture2D" uid="uid://dkgfkknlk2pd5" path="res://Background/Other/Imagem3.png" id="5_tccqq"]
+[ext_resource type="AudioStream" uid="uid://3hsy1a71sjcl" path="res://Sounds/Jump.wav" id="7_2p8t1"]
+[ext_resource type="AudioStream" uid="uid://c564rwor10l7k" path="res://Sounds/Hit6.wav" id="8_oqmj2"]
+[ext_resource type="AudioStream" uid="uid://4iu0qs4u7ao3" path="res://Sounds/PowerUp1.wav" id="9_3ypi2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_obsov"]
 atlas = ExtResource("2_prhl5")
@@ -50,10 +53,6 @@ region = Rect2(288, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_epjcg"]
 atlas = ExtResource("2_prhl5")
 region = Rect2(320, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2nfo5"]
-atlas = ExtResource("4_17if6")
-region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ronb"]
 atlas = ExtResource("4_3i0ip")
@@ -149,14 +148,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"jumping",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2nfo5")
-}],
-"loop": true,
-"name": &"prince",
 "speed": 5.0
 }, {
 "frames": [{
@@ -278,10 +269,20 @@ visible = false
 position = Vector2(0.999997, 24.75)
 scale = Vector2(0.958333, 0.713636)
 sprite_frames = SubResource("SpriteFrames_p6jyh")
-frame_progress = 0.170863
+frame_progress = 0.94365
 
 [node name="Prince" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(1.54972e-06, 32.5)
 scale = Vector2(4.125, 4.0625)
 sprite_frames = SubResource("SpriteFrames_fi8m3")
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_2p8t1")
+volume_db = -25.0
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_oqmj2")
+
+[node name="PickUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_3ypi2")

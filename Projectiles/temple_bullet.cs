@@ -24,7 +24,7 @@ public partial class temple_bullet : Area2D
 		var player = area.GetParent() as main_character;
 			if (player != null && elapsed_time > 1) 
 			{
-				player.health -= 1;
+				player.take_damage();
 				elapsed_time = 0;
 			}
 		}

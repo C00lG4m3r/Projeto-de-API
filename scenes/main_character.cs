@@ -15,9 +15,18 @@ public partial class main_character : CharacterBody2D
 	}
 	public Player_PowerUps current_powerup = Player_PowerUps.none;
 	public PackedScene ninja_star_scene = GD.Load<PackedScene>("res://Projectiles/ninja_star.tscn");
+	public AudioStreamPlayer jump;
+	public AudioStreamPlayer hit;
 	public float Speed = 400.0f;
+	public void take_damage() 
+	{
+		health -= 1;
+		hit.Play();
+	}
 	public Vector2 knockbackvelocity;
 	public float JumpVelocity = -900.0f;
+	public bool IsSoundPlaying;
+	public bool IsCave;
 	public bool IsSwimming;
 	public bool IsHighGravity;
 	public bool IsLowGravity;
@@ -25,7 +34,6 @@ public partial class main_character : CharacterBody2D
 	public bool IsWinning;
 	public AnimatedSprite2D Sprite2D;
 	public int health = 1;
-	public int bubblehealth;
 	public bool time_warp;
 	public Vector2 mouse_pos;
 
@@ -33,6 +41,8 @@ public partial class main_character : CharacterBody2D
 	{
 		Sprite2D = GetNode<AnimatedSprite2D>("Sprite2D");
 		GD.Print(Sprite2D);	
+		jump = GetNode<AudioStreamPlayer>("./Jump");
+		hit = GetNode<AudioStreamPlayer>("./Hit");
 	}
 
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -105,6 +115,7 @@ public partial class main_character : CharacterBody2D
 		// Handle Jump.
 		if (Input.IsActionJustPressed("Jump") && (IsOnFloor() || IsSwimming))
 		{
+			jump.Play();
 			if (IsWinning)
 			{}else 
 			{
@@ -180,6 +191,8 @@ public partial class main_character : CharacterBody2D
 			break;
 			case main_character.Player_PowerUps.time_warp:
 			time_warp=true;
+			break;
+			case main_character.Player_PowerUps.big_powerup:
 			break;
 		}
 	}

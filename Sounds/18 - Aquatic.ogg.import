@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/18 - Aquatic.ogg-77e7b4a5ff05c4997b7768816eea
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

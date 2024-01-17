@@ -4,6 +4,7 @@ using System;
 public partial class temple_enemy : CharacterBody2D
 {
 	public main_character player_node;
+	public AudioStreamPlayer kill;
 	public Vector2 player_pos;
 	public double elapsed_time;
 	public PackedScene temple_bullet_scene = GD.Load<PackedScene>("res://Projectiles/temple_bullet.tscn");
@@ -14,6 +15,7 @@ public partial class temple_enemy : CharacterBody2D
 	public override void _Ready()
 	{
 		this.player_node = GetNode<main_character>("../CharacterBody2D");
+		kill = GetNode<AudioStreamPlayer>("./Kill");
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -28,7 +30,7 @@ public partial class temple_enemy : CharacterBody2D
 			AddSibling(shot);
 			shot.Position = this.Position + this.Position.DirectionTo(player_pos) * 40;
 			shot.direction = this.Position.DirectionTo(player_pos);
-			shot.bullet_speed = 1;
+			shot.bullet_speed = 5;
 			elapsed_time = 0;
 		}
 
@@ -39,7 +41,7 @@ public partial class temple_enemy : CharacterBody2D
 	{
 		if (area is ninja_star)
 		{
-			GD.Print("coco");
+			kill.Play();
 			QueueFree();
 		}
 	}

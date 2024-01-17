@@ -62,5 +62,6 @@ wait_time = 0.1
 
 [node name="Kiss" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_4stpq")
+volume_db = 7.0
 
 [connection signal="timeout" from="Label/next_char" to="." method="OnNextCharTimeout"]

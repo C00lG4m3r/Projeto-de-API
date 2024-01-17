@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://5xedbb14q36u"]
+[gd_scene load_steps=21 format=3 uid="uid://5xedbb14q36u"]
 
 [ext_resource type="Script" path="res://Ops/desert_enemy.cs" id="1_x7m4n"]
 [ext_resource type="Texture2D" uid="uid://dohednaqbilun" path="res://Ops/Animations/Desert enemy/Idle (40x48).png" id="2_lx0oc"]
 [ext_resource type="Texture2D" uid="uid://desvnklxf3x7r" path="res://Ops/Animations/Desert enemy/Hit (40x48).png" id="3_sbo5h"]
+[ext_resource type="AudioStream" uid="uid://bt24xwb3wetoa" path="res://Sounds/Kill.wav" id="4_831wr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5jia"]
 size = Vector2(84, 111)
@@ -134,5 +135,8 @@ frame_progress = 0.784685
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(40, 55.5)
 shape = SubResource("RectangleShape2D_k83yt")
+
+[node name="Kill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_831wr")
 
 [connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]

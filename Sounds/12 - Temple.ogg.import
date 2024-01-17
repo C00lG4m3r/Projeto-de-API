@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/12 - Temple.ogg-819199765f2fbb3c3f553bcedc03a
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -4,10 +4,12 @@ using System;
 public partial class Temple : Area2D
 {
 	public main_character Global_Player;
+	public AudioStreamPlayer temple;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		Global_Player = GetNode<main_character> ("../CharacterBody2D");
+		temple = GetNode<AudioStreamPlayer>("../Temple2");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,6 +24,17 @@ public partial class Temple : Area2D
 		{
 			Global_Player.IsHighGravity = true;
 		}
+		}
+
+		if (Global_Player.IsHighGravity)
+		{
+			if (!temple.Playing)
+			{
+				temple.Play();
+			}
+		} else 
+		{
+			temple.Stop();
 		}
 	}
 }

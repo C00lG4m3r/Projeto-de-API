@@ -4,6 +4,7 @@ using System;
 public partial class water_enemy : CharacterBody2D
 {
 	public main_character player_node;
+	public AudioStreamPlayer kill;
 	public AnimatedSprite2D Sprite2D;
 	public float Speed = 300.0f;
 	public double elapsed_time;
@@ -16,6 +17,7 @@ public partial class water_enemy : CharacterBody2D
 		this.player_node = GetNode<main_character>("../CharacterBody2D");
 		Sprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		GD.Print(Sprite2D);	
+		kill = GetNode<AudioStreamPlayer>("./Kill");
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -39,7 +41,7 @@ public partial class water_enemy : CharacterBody2D
 			var player = area.GetParent() as main_character;
 			if (player != null && elapsed_time > 1) 
 			{
-				player.health -= 1;
+				player.take_damage();
 				elapsed_time = 0;
 			}
 		}
@@ -50,6 +52,7 @@ public partial class water_enemy : CharacterBody2D
 	{
 		if (area is ninja_star)
 		{
+			kill.Play();
 			QueueFree();
 		}
 	}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dkpbqrcro8uu6"]
+[gd_scene load_steps=48 format=3 uid="uid://dkpbqrcro8uu6"]
 
 [ext_resource type="Texture2D" uid="uid://b2nt817o4dyc6" path="res://Background/Cave/01 bg.png" id="1_6ytqb"]
 [ext_resource type="Texture2D" uid="uid://ci6qq5ccyl7kr" path="res://Background/Underwater/Terrain (16x16).png" id="2_cmnow"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" path="res://scenes/Sky.cs" id="14_yyjx7"]
 [ext_resource type="PackedScene" uid="uid://bgcv6mhvvbqxf" path="res://HUD/hud.tscn" id="15_ylq0i"]
 [ext_resource type="Script" path="res://scenes/Space.cs" id="17_5e35j"]
+[ext_resource type="Script" path="res://scenes/Cave.cs" id="18_8hds4"]
 [ext_resource type="Script" path="res://scenes/Spikes.cs" id="18_y6t7o"]
 [ext_resource type="PackedScene" uid="uid://burwbqcmdfqve" path="res://DeathScreen/death_screen.tscn" id="19_urfkq"]
 [ext_resource type="PackedScene" uid="uid://kniswgl1b0fn" path="res://Power Ups/Interactable/power_up_interactable.tscn" id="24_urp34"]
@@ -29,6 +30,11 @@
 [ext_resource type="PackedScene" uid="uid://c6hyvpqhhukmc" path="res://Ops/water_enemy.tscn" id="27_h58st"]
 [ext_resource type="PackedScene" uid="uid://dm5g5j3n4m82v" path="res://Ops/temple_enemy.tscn" id="28_q45s3"]
 [ext_resource type="PackedScene" uid="uid://5xedbb14q36u" path="res://Ops/desert_enemy.tscn" id="29_cd275"]
+[ext_resource type="AudioStream" uid="uid://d1aoig6uqf7q8" path="res://Sounds/18 - Aquatic.ogg" id="30_pi6jo"]
+[ext_resource type="AudioStream" uid="uid://d1ipw8gfaslyv" path="res://Sounds/12 - Temple.ogg" id="31_vnlbe"]
+[ext_resource type="AudioStream" uid="uid://mck67k7fplnv" path="res://Sounds/Sky.ogg" id="32_b07jq"]
+[ext_resource type="AudioStream" uid="uid://cato04l5qrc5d" path="res://Sounds/Space.ogg" id="33_8708w"]
+[ext_resource type="AudioStream" uid="uid://dgk1p0asx2t4r" path="res://Sounds/2 - The Cave.ogg" id="33_pryiu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_diugi"]
 texture = ExtResource("2_cmnow")
@@ -5063,6 +5069,13 @@ script = ExtResource("14_74h6j")
 visible = false
 polygon = PackedVector2Array(-907, 320, -912, 617, -510, 971, -47, 974, 181, 882, 377, 885, 502, 967, 733, 967, 897, 1017, 1289, 1017, 1418, 1049, 1549, 992, 1553, 1024, 1735, 1024, 1799, 974, 1931, 974, 2016, 932, 2458, 932, 2999, 932, 3444, -469, 2165, -740, 454, -665, 162, -864, -308, -779)
 
+[node name="Cave" type="Area2D" parent="."]
+script = ExtResource("18_8hds4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cave"]
+visible = false
+polygon = PackedVector2Array(170, -1060, 645, -789, 3349, -668, 4330, -736, 4353, -1884, 3696, -2752, 1725, -2903, 1189, -2910, 351, -2639)
+
 [node name="Sky" type="Area2D" parent="."]
 script = ExtResource("14_yyjx7")
 
@@ -5078,7 +5091,7 @@ visible = false
 polygon = PackedVector2Array(-1862, -6461, 4469, -6461, 4475, -11962, -1841, -11955)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_e1wr0")]
-position = Vector2(-60, -11179)
+position = Vector2(-1778, 577)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = -1820
@@ -5138,3 +5151,18 @@ position = Vector2(-1628, -4703)
 
 [node name="Power Up Interactable5" parent="." instance=ExtResource("24_urp34")]
 position = Vector2(-1862, -3019)
+
+[node name="Aquatic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_pi6jo")
+
+[node name="Temple2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_vnlbe")
+
+[node name="Cave2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_pryiu")
+
+[node name="Sky2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("32_b07jq")
+
+[node name="Space2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_8708w")

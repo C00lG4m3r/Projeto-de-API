@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Sky.ogg-0de9bf1115ff55dac993e39160d22aca.oggv
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

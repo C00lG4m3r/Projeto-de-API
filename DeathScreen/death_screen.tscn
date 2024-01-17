@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://burwbqcmdfqve"]
+[gd_scene load_steps=10 format=3 uid="uid://burwbqcmdfqve"]
 
 [ext_resource type="Script" path="res://DeathScreen/death_screen.cs" id="1_bt4vb"]
 [ext_resource type="Texture2D" uid="uid://h7jggy4ca1or" path="res://Background/Blocks/Underwaterlands_Tile_Set.png" id="2_wmb30"]
 [ext_resource type="Texture2D" uid="uid://vpkotbfe0van" path="res://Background/Blocks/Cloud Tileset.png" id="3_w53lp"]
 [ext_resource type="Texture2D" uid="uid://gavniddsyhhw" path="res://scenes/Jump (32x32).png" id="4_p4nxf"]
 [ext_resource type="FontFile" uid="uid://c47fxe0c4hvtl" path="res://Fonts/NormalFont.ttf" id="5_4vo58"]
+[ext_resource type="AudioStream" uid="uid://knakc37450bj" path="res://Sounds/GameOver2.wav" id="6_4y8j7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lfct"]
 texture = ExtResource("2_wmb30")
@@ -727,6 +728,9 @@ text = "YOU    DIED!"
 alignment = 1
 editable = false
 flat = true
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_4y8j7")
 
 [connection signal="pressed" from="CanvasLayer/Restart" to="." method="OnRestartPressed"]
 [connection signal="pressed" from="CanvasLayer/Main Menu" to="." method="OnMainMenuPressed"]

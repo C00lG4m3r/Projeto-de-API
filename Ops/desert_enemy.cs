@@ -4,6 +4,7 @@ using System;
 public partial class desert_enemy : CharacterBody2D
 {
 	public main_character player_node;
+	public AudioStreamPlayer kill;
 	public Vector2 player_pos;
 	public double elapsed_time;
 	public PackedScene desert_bullet_scene = GD.Load<PackedScene>("res://Projectiles/desert_bullet.tscn");
@@ -14,6 +15,7 @@ public partial class desert_enemy : CharacterBody2D
 	public override void _Ready()
 	{
 		this.player_node = GetNode<main_character>("../CharacterBody2D");
+		kill = GetNode<AudioStreamPlayer>("./Kill");
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -43,6 +45,7 @@ public partial class desert_enemy : CharacterBody2D
 	{
 		if (area is ninja_star)
 		{
+			kill.Play();
 			QueueFree();
 		}
 	}

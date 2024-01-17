@@ -1,9 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://dm5g5j3n4m82v"]
+[gd_scene load_steps=33 format=3 uid="uid://dm5g5j3n4m82v"]
 
 [ext_resource type="Script" path="res://Ops/temple_enemy.cs" id="1_ueqrc"]
 [ext_resource type="Texture2D" uid="uid://dhxq6m8ud0nad" path="res://Ops/Animations/Temple enemy/Attack (44x42).png" id="2_jas7q"]
 [ext_resource type="Texture2D" uid="uid://d2flahbbayaex" path="res://Ops/Animations/Temple enemy/Idle (44x42).png" id="3_c8yc6"]
 [ext_resource type="Texture2D" uid="uid://44kg0ilyuir3" path="res://Ops/Animations/Temple enemy/Hit (44x42).png" id="4_57oww"]
+[ext_resource type="AudioStream" uid="uid://bt24xwb3wetoa" path="res://Sounds/Kill.wav" id="5_jbyi4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_upcls"]
 radius = 44.0
@@ -221,5 +222,8 @@ frame_progress = 0.962947
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(86, 90)
 shape = SubResource("CapsuleShape2D_7jak4")
+
+[node name="Kill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jbyi4")
 
 [connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]

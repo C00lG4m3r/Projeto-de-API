@@ -4,10 +4,13 @@ using System;
 public partial class death_screen : Node2D
 {
 	public main_character Global_Player;
+	public AudioStreamPlayer death;
+	public bool IsSoundPlayed;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		Global_Player = GetNode<main_character>("../CharacterBody2D");
+		death = GetNode<AudioStreamPlayer>("./Death");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,6 +26,11 @@ public partial class death_screen : Node2D
 		GetNode<Godot.Sprite2D>("CanvasLayer/Froggie 1").Visible = true;
 		GetNode<Godot.Sprite2D>("CanvasLayer/Froggie 2").Visible = true;
 		GetTree().Paused = true;
+		if (!IsSoundPlayed)
+		{
+			death.Play();
+			IsSoundPlayed = true;
+		} 
 		}
 	}
 	private void OnRestartPressed()

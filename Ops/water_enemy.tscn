@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://c6hyvpqhhukmc"]
+[gd_scene load_steps=28 format=3 uid="uid://c6hyvpqhhukmc"]
 
 [ext_resource type="Script" path="res://Ops/water_enemy.cs" id="1_6olag"]
 [ext_resource type="Texture2D" uid="uid://c6xlctgekvh5n" path="res://Ops/Animations/Water enemy/Attack.png" id="2_5qt1s"]
 [ext_resource type="Texture2D" uid="uid://dygxucuikh2mu" path="res://Ops/Animations/Water enemy/Death.png" id="3_sh8tl"]
 [ext_resource type="Texture2D" uid="uid://c3jwwaak4fh8o" path="res://Ops/Animations/Water enemy/Idle.png" id="4_pt4bm"]
 [ext_resource type="Texture2D" uid="uid://lp3eyg2agm7r" path="res://Ops/Animations/Water enemy/Hurt.png" id="5_r71hd"]
+[ext_resource type="AudioStream" uid="uid://bt24xwb3wetoa" path="res://Sounds/Kill.wav" id="6_2lc5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4h2y"]
 size = Vector2(198.5, 125.25)
@@ -181,5 +182,8 @@ frame_progress = 0.693404
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_gt6ic")
+
+[node name="Kill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_2lc5g")
 
 [connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]

@@ -17,6 +17,7 @@ public abstract partial class power_up : Area2D
 	}
 	private void OnBodyEntered(Node2D body)
 	{
+		this.GetNode<AudioStreamPlayer>("../CharacterBody2D/PickUp").Play();
 		this.PowerUpAction();
 		this.QueueFree();
 	}
